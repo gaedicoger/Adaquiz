@@ -1,0 +1,90 @@
+{
+  "title": "Femmes scientifiques célèbres",
+  "questions": [
+    {
+      "question": "Qui est considérée comme la première programmeuse de l’histoire ?",
+      "options": [
+        "Grace Hopper",
+        "Ada Lovelace",
+        "Dorothy Vaughan",
+        "Margaret Hamilton"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Dans quel domaine Fatomata Kebe est-elle principalement connue ?",
+      "options": ["La chimie", "La médecine", "L’astronomie", "La biologie"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quel langage de programmation est associé au travail de Grace Hopper ?",
+      "options": ["COBOL", "Java", "Python", "C"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Dorothy Vaughan a travaillé pour quelle organisation américaine ?",
+      "options": ["IBM", "La NASA", "Le MIT", "L’ESA"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quelle scientifique est la seule femme à avoir reçu deux prix Nobel dans deux disciplines différentes ?",
+      "options": [
+        "Rosalind Franklin",
+        "Chien-Shiung Wu",
+        "Marie Curie",
+        "Irène Joliot-Curie"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quelle mathématicienne a joué un rôle clé dans les calculs des missions spatiales Apollo ?",
+      "options": [
+        "Dorothy Vaughan",
+        "Ada Lovelace",
+        "Katherine Johnson",
+        "Grace Hopper"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quelle scientifique a contribué à la découverte de la structure de l’ADN grâce à la cristallographie ?",
+      "options": [
+        "Rosalind Franklin",
+        "Marie Curie",
+        "Jane Goodall",
+        "Barbara McClintock"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quelle ingénieure a dirigé le développement du logiciel du programme Apollo 11 ?",
+      "options": [
+        "Grace Hopper",
+        "Margaret Hamilton",
+        "Katherine Johnson",
+        "Dorothy Vaughan"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chien-Shiung Wu est connue pour ses contributions majeures dans quel domaine ?",
+      "options": [
+        "La chimie organique",
+        "L'astronomie",
+        "La physique nucléaire",
+        "L'informatique"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quelle scientifique est connue pour ses travaux sur le comportement des chimpanzés ?",
+      "options": [
+        "Jane Goodall",
+        "Marie Curie",
+        "Rosalind Franklin",
+        "Fatomata Kebe"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}
