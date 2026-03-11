@@ -3,9 +3,10 @@
 // Import
 
 import "./style.css";
+import ".start.js";
 import quiz from "./quiz-femmes-scientifiques.json";
-//import accueil from "./accueil.js";
-//accueil.startScreen;
+//import start from "./start.js";
+//start.startScreen;
 
 // Affichage titre quizz sur écran d'acceuil (+ écran questions ?)
 document.querySelector(".welcome > h1").innerText = quiz.title;
