@@ -4,6 +4,7 @@
 
 import "./style.css";
 import quiz from "./quiz-femmes-scientifiques.json";
+import "./btn-next-question.js";
 
 // Affichage titre quizz sur écran d'acceuil (+ écran questions ?)
 document.querySelector(".welcome > h1").innerText = quiz.title;
