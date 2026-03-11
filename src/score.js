@@ -2,6 +2,7 @@
 //import ? score from "./es-questions.js"
 //import ? Récupérer le nombre de questions en tout.
 //Import ?Récupérer le nombre de question réussies.
+import startScreen from "./start.js";
 
 //Afficher le score:
 function displayScoreMessage () { 
@@ -20,7 +21,7 @@ resultScore.innerText=`Ton score est de ${score}`
 }
 //Fonction pour afficher le nombre de questions réussies:
 function displayTotalScore () {
-
+let retryQuiz = document.getElementById("retryQuiz")//Récupérer le bouton recommencer
+retryQuiz.addEventListener("click", (startScreen))//Ecouter le bouton récommencer pour réinitialiser le questionnaire an appelant la fonction StartScreen
 }
-//Récupérer le bouton recommencer
-//Ecouter le bouton récommencer pour réinitialiser le questionnaire
+
