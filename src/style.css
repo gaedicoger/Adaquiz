@@ -84,7 +84,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background: #812a9b;
+  background: radial-gradient(
+    circle,
+    rgba(129, 42, 155, 1) 0%,
+    rgba(87, 93, 199, 1) 75%,
+    rgba(237, 83, 232, 0.33) 100%
+  );
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -109,7 +115,7 @@ button:focus-visible {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #454545;
+  background: #50414e;
   cursor: pointer;
   transition: border-color 0.25s;
   width: 45%;
