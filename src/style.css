@@ -56,6 +56,12 @@ h1 {
   display: none;
 }
 
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -105,6 +111,17 @@ button:focus-visible {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 1rem;
+}
+#currentQuestion {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#answerMessage {
+  display: flex;
+  justify-content: center;
   gap: 1rem;
 }
 
