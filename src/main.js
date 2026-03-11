@@ -3,7 +3,7 @@
 // Import
 
 import "./style.css";
-import ".start.js";
+import "./start.js";
 import quiz from "./quiz-femmes-scientifiques.json";
 //import start from "./start.js";
 //start.startScreen;

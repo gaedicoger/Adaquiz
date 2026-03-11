@@ -1,5 +1,5 @@
 //importer les fonctions requises :
-import startQuiz from "./es-questions.js";
+//import startQuiz from "./btn-next-questions.js";
 
 //Fonction de démarrage du quizz :
 function startScreen() {
