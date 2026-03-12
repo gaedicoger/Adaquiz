@@ -25,9 +25,19 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  text-align: left;
+}
+
+header h1 {
+  font-size: 2em;
+  color:;
 }
 
 h1 {
@@ -38,8 +48,18 @@ h1 {
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .logo {
@@ -70,18 +90,53 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background: #812a9b;
+  background: radial-gradient(
+    circle,
+    rgba(129, 42, 155, 1) 0%,
+    rgba(87, 93, 199, 1) 75%,
+    rgba(237, 83, 232, 0.33) 100%
+  );
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #ff64e8;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+#answerButtons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#currentQuestion {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
 
+#answerMessage {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.buttonA {
+  border-radius: 8px;
+  border: 4px solid transparent;
+  padding: 1.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background: #50414e;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  width: 45%;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
