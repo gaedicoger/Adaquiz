@@ -1,52 +1,48 @@
 /* JS Page questions :
-
-- Le bouton « Question suivante » doit être caché par défaut et s’afficher lorsqu’on clique sur une réponse
-- Lorsqu’on clique sur ce bouton, il doit afficher la question suivante
-- La dernière question il doit afficher l’écran de fin.
-
+- Le bouton « Question suivante » doit être caché par défaut :
+  - il s'affiche quand l'utilisateur clique sur une réponse
+  - à la dernière question il doit afficher l’écran de fin.
 */
 
-//! récupérer le bouton "question suivante" et le cacher par défaut
+export function initBtnNext() {
+  // on récupère les éléments
+  const btnNextQuestion = document.getElementById("nextQuestion");
+  const answerContainer = document.getElementById("answerButtons");
+  const questionDisplay = document.querySelector(".questions");
+  const endScreen = document.querySelector(".endScreen");
 
-// récupérer le bouton
+  // bouton caché au départ
+  btnNextQuestion.classList.add("hidden");
 
-const btnNextQuestion = document.getElementById("nextQuestion");
+  // bouton apparaît quand l'utilisateur clique sur une réponse
+  answerContainer.addEventListener("click", (event) => {
+    if (event.target.tagName === "BUTTON") {
+      btnNextQuestion.classList.remove("hidden");
+    }
+  });
 
-// cacher le bouton au départ en ajoutant une classe au bouton
-
-btnNextQuestion.classList.add("hidden");
-
-//* A ajouter la classe suivante dans le CSS : ok par Gaédic
-/*
-.hidden{
-display:none;
+  // affichage écran de fin quand bouton cliqué
+  btnNextQuestion.addEventListener("click", () => {
+    // on cache l'écran des questions
+    questionDisplay.classList.add("hidden");
+    // on affiche l'écran de fin
+    endScreen.classList.remove("hidden");
+  });
 }
+
+/**
+//todo : pour le moment on affiche directement l'écran de fin quand on clique sur le bouton
+//todo : pour que l'écran de fin ne s'affiche qu'après la dernière question, il faut itérer sur l'index "questions"
+//todo : l'itération est à gérer dans le fichier quiz-display
+//todo : quand quiz-display sera ok, intégrer les fonctions nécessaires ici
 */
 
-//! afficher le bouton quand on clique sur une réponse
+/**
+//! on vérifie que l'utilisateur clique bien sur le bouton et non entre deux boutons
 
-// récupérer la div qui contient les boutons réponses
-
-const answerContainer = document.getElementById("answerButtons");
-
-// écouter la div quand on clique sur une réponse
-
-answerContainer.addEventListener("click", (event) => {
-  //* on vérifie que l'utilisateur clique bien sur le bouton et non entre deux boutons
-  // "event" représente l'événement de clic qui vient de se produire
-  // Il contient plusieurs informations, dont :
-  // - où l'utilisateur a cliqué
-  // - quel élément HTML a été cliqué
-  // event.target = l'élément exact qui a été cliqué par l'utilisateur
-  // tagName = le type de balise HTML de cet élément (BUTTON, DIV, P, etc.)
-  if (event.target.tagName === "BUTTON") {
-    // Si la condition est vraie :
-    // on enlève la classe "hidden" du bouton next question
-    btnNextQuestion.classList.remove("hidden");
-  }
-});
-
-// answerContainer.addEventListener("click", () => {
-//   //! attention ici on applique le code même si l'utilisateur clique entre les boutons car on applique sur la div entière !!
-//   btnNextQuestion.classList.remove("hidden");
-// });
+"event" représente l'événement du clic qui vient de se produire
+Il contient plusieurs informations, dont :
+- où l'utilisateur a cliqué : event.target = l'élément exact qui a été cliqué par l'utilisateur
+- quel élément HTML a été cliqué : tagName = le type de balise HTML de cet élément (BUTTON, DIV, P, etc.)
+"if" vérifie que si la condition est vraie : on enlève la classe "hidden" du bouton next question
+*/
