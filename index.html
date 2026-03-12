@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="src/icons8-quiz-64.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>adaquiz</title>
   </head>
@@ -13,24 +13,24 @@
     <div id="app">
       <div class="welcome">
         <h1>Title</h1>
-        <button>Démarrer</button>
+        <button class="button" id="startButton">Démarrer</button>
       </div>
       <div class="questions">
         <div id="currentQuestion"></div>
         <div id="answerButtons">
-          <button class="button" id="button1">Réponse 1</button>
-          <button class="button" id="button2">Réponse 2</button>
-          <button class="button" id="button3">Réponse 3</button>
-          <button class="button" id="button4">Réponse 4</button>
+          <button class="buttonA" id="button1">Réponse 1</button>
+          <button class="buttonA" id="button2">Réponse 2</button>
+          <button class="buttonA" id="button3">Réponse 3</button>
+          <button class="buttonA" id="button4">Réponse 4</button>
         </div>
         <div id="answerMessage"></div>
-        <button id="nextQuestion"></button>
+        <button class="button" id="nextQuestion">Question suivante</button>
       </div>
       <div class="endScreen">
         <h2 id="scoreMessage"></h2>
         <h3 id="resultScore"></h3>
         <div id="totalScore"></div>
-        <button id="retryQuiz">Recommencer</button>
+        <button class="button" id="retryQuiz">Recommencer</button>
       </div>
     </div>
     <div></div>
