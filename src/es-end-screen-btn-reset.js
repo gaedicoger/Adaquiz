@@ -16,8 +16,7 @@ const btnRetry = document.getElementById("retryQuiz");
 btnRetry.addEventListener("click", () => {
     nomFonction();
     });
-    
-    */
+        */
 
 //! Création d'une fonction qui sera ensuite utilisée dans main.js
 

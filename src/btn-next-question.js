@@ -16,7 +16,7 @@ const btnNextQuestion = document.getElementById("nextQuestion");
 
 btnNextQuestion.classList.add("hidden");
 
-//* j'ai ajouté la classe suivante dans le CSS :
+//* A ajouter la classe suivante dans le CSS : ok par Gaédic
 /*
 .hidden{
 display:none;
