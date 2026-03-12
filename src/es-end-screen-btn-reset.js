@@ -16,13 +16,15 @@ const btnRetry = document.getElementById("retryQuiz");
 btnRetry.addEventListener("click", () => {
     nomFonction();
     });
-        */
+
+*/
 
 //! Création d'une fonction qui sera ensuite utilisée dans main.js
 
-// Quand l’utilisa'teur clique sur "Recommencer"
+// Quand l’utilisateur clique sur "Recommencer"
 // réinitialiser l'index des questions //* let indexAnswers
 // réinitialiser le score à 0 //* let score = 0
+// vider le localStorage (bonus)
 // masquer l’écran de fin
 // masquer barre de progression //* let questionActuelle
 // afficher l’écran de quiz
