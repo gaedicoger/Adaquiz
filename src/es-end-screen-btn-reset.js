@@ -24,6 +24,6 @@ btnRetry.addEventListener("click", () => {
 // réinitialiser l'index des questions //* let indexAnswers
 // réinitialiser le score à 0 //* let score = 0
 // masquer l’écran de fin
-// masquer barre de progression let questionActuelle
+// masquer barre de progression //* let questionActuelle
 // afficher l’écran de quiz
 // cacher le bouton "Question suivante"
