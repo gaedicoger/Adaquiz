@@ -24,7 +24,6 @@ displayQuizScreen.classList.add("hidden");
 displayEndScreen.classList.add("hidden");
 
 // ======================= Ecran d'acceuil =========================
-//todo : CSS : recentrer la page
 
 //* affichage titre quizz sur écran d'acceuil
 document.querySelector(".quiz-title > h1").innerText = quiz.title;
@@ -33,7 +32,6 @@ document.querySelector(".quiz-title > h1").innerText = quiz.title;
 const startButton = document.getElementById("startButton");
 
 // ========================= Ecran quizz ===========================
-//todo : CSS : recentrer la page
 
 startButton.addEventListener("click", function () {
   // cacher l'écran d'accueil
