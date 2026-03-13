@@ -3,22 +3,24 @@
 // Import
 
 import "./style.css";
-import "./start.js";
+// import "./start.js";
 import quiz from "./quiz-femmes-scientifiques.json";
 
 //! les import ci-dessous suppriment le style CSS de Vite....
 import { initBtnNext } from "./btn-next-question.js";
-// import { questionSuivante } from "./progression.js"; // syntaxe à favoriser pour cibler une fonction définie dans le .js, permet de minimiser le nombre d'import
+import { questionSuivante } from "./progression.js"; // syntaxe à favoriser pour cibler une fonction définie dans le .js, permet de minimiser le nombre d'import
 import { startQuiz } from "./quiz-display.js";
 
 // ========================= AFFICHAGE PAR DEFAUT ==========================
 
-//* récupérer les écrans
+// //* récupérer les écrans
 const displayStartScreen = document.querySelector(".welcome");
-const displayQuizScreen = document.querySelector("#app");
+const displayQuizScreen = document.querySelector("#questions-container");
 const displayEndScreen = document.querySelector(".endScreen");
 
-//* masquer par défaut l'écran quiz et écran de fin
+// displayStartScreen.classList.add("hidden");
+
+// //* masquer par l'écran quiz et écran de fin
 
 displayQuizScreen.classList.add("hidden");
 displayEndScreen.classList.add("hidden");
@@ -39,6 +41,7 @@ startButton.addEventListener("click", function () {
 
   // afficher l'écran quiz
   displayQuizScreen.classList.remove("hidden");
+  document.querySelector(".questions > header > h1").innerText = quiz.title;
 
   // lancer le quiz (affiche la première question)
   startQuiz();

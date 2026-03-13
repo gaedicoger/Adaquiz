@@ -6,7 +6,7 @@ import quiz from "./quiz-femmes-scientifiques.json";
 // récupérer les éléments HTML
 const nextButton = document.getElementById("next-question");
 const answerButtons = document.querySelectorAll(".buttonA");
-const questionContainer = document.querySelector(".questions");
+const questionContainer = document.querySelector("#questions-container");
 
 // créer le bouton Résultat (il n'existe pas dans le HTML)
 const resultButton = document.createElement("button");

@@ -3,7 +3,7 @@
 import quiz from "./quiz-femmes-scientifiques.json";
 
 // récupérer les éléments HTML
-const startScreen = document.querySelector(".start-screen");
+const startScreen = document.querySelector(".welcome");
 const quizScreen = document.querySelector("#app");
 const questionElement = document.getElementById("currentQuestion");
 const answerButtons = document.querySelectorAll(".buttonA");
