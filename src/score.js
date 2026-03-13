@@ -1,5 +1,5 @@
 // ============================= IMPORTS ======================================
-//import quiz from "./quiz-femmes-scientifiques.json";
+import quiz from "./quiz-femmes-scientifiques.json";
 //import score from "./main.js";
 
 // ============================= VARIABLES ====================================
@@ -31,7 +31,7 @@ function calculPourcentScore(finalScore, numberQuestions) {
 //Fonction pour afficher le score :
 /**
  *
- * @param {*} score
+ * @param {*} finalScore
  */
 function displayScore(finalScore) {
   let resultScore = document.getElementById("resultScore");
@@ -82,6 +82,6 @@ export function endScreen() {
   endScreen.classList.remove("hidden"); //afficher l’écran de fin
   calculPourcentScore(finalScore, numberQuestions); //calculer le pourcentage de réussite
   displayScore(finalScore); //afficher le score final
-  displayScoreMessage(pourcentScore); //affichaer le message réussite
-  displayTotalScore(finalScore, numberQuestions); //afficher le nomvbre de squestions réussies
+  displayScoreMessage(pourcentScore); //afficher le message réussite
+  displayTotalScore(finalScore, numberQuestions); //afficher le nombre de questions réussies
 }

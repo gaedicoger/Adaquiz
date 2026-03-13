@@ -8,19 +8,22 @@
 // ============================= VARIABLES ====================================
 //Récupérer et stocker les deux index dans une variable:  doit être dans main.js avec la fonction calcul de score
 let indexUserAnswer =; //le chemin correspondant à l'index du bouton sur lequle l'utilisateur à cliqué.
-let correctIndex = //le chemin correspondant au correctIndex correspondant à la question
+let correctIndex = //le chemin correspondant au correctIndex correspondant à la question.
+
 //Fonction calcul du score:
 /**
  *
  * @param {*} indexUserAnswer
  * @param {*} correctIndex
  */
-export function calculScore(indexUserAnswer, correctIndex) {
+function calculScore(indexUserAnswer, correctIndex) {
   //quand je clique sur une réponse sur un bouton je stocke l'index de la réponse trouver comment le stocker sur la page bouton ?
   if (indexUserAnswer === correctIndex) {
     score += 1;
   }
+  displayAnswerMessage (indexUserAnswer, correctIndex);
 }
+
 //A DEPLACER DANS QUIZ-DISPLAY:
 // ============================= IMPORTS ======================================
 //import { correctIndex } from "./main.js";
