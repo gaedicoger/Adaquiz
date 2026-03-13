@@ -30,6 +30,10 @@ body {
   min-height: 100vh;
 }
 
+.hidden {
+  display: none;
+}
+
 header {
   width: 100%;
   text-align: left;
@@ -37,7 +41,7 @@ header {
 
 header h1 {
   font-size: 2em;
-  color:;
+  /* color:; */
 }
 
 h1 {
@@ -50,10 +54,6 @@ h1 {
   margin: 0 auto;
   padding: 1rem;
   text-align: center;
-}
-
-.hidden {
-  display: none;
 }
 
 .questions {

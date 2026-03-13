@@ -5,12 +5,46 @@
 import "./style.css";
 import "./start.js";
 import quiz from "./quiz-femmes-scientifiques.json";
+
+//! les import ci-dessous suppriment le style CSS de Vite....
 import { initBtnNext } from "./btn-next-question.js";
-import { questionSuivante } from "./progression.js"; // syntaxe à favoriser pour cibler une fonction définie dans le .js, permet de minimiser le nombre d'import
+// import { questionSuivante } from "./progression.js"; // syntaxe à favoriser pour cibler une fonction définie dans le .js, permet de minimiser le nombre d'import
+import { startQuiz } from "./quiz-display.js";
 
-// Affichage titre quizz sur écran d'acceuil (+ écran questions ?)
-document.querySelector(".welcome > h1").innerText = quiz.title;
-questionSuivante();
+// ========================= AFFICHAGE PAR DEFAUT ==========================
 
-// initialiser ton bouton « Question suivante »
-initBtnNext();
+//* récupérer les écrans
+const displayStartScreen = document.querySelector(".start-screen");
+const displayQuizScreen = document.querySelector("#app");
+const displayEndScreen = document.querySelector(".endScreen");
+
+//* masquer par défaut l'écran quiz et écran de fin
+
+displayQuizScreen.classList.add("hidden");
+displayEndScreen.classList.add("hidden");
+
+// ======================= Ecran d'acceuil =========================
+//todo : CSS : recentrer la page
+
+//* affichage titre quizz sur écran d'acceuil
+document.querySelector(".quiz-title > h1").innerText = quiz.title;
+
+//* récupérer le bouton "démarrer"
+const startButton = document.getElementById("startButton");
+
+// ========================= Ecran quizz ===========================
+//todo : CSS : recentrer la page
+
+startButton.addEventListener("click", function () {
+  // cacher l'écran d'accueil
+  displayStartScreen.classList.add("hidden");
+
+  // afficher l'écran quiz
+  displayQuizScreen.classList.remove("hidden");
+
+  // lancer le quiz (affiche la première question)
+  startQuiz();
+
+  // initialiser le bouton Next + bouton Résultat
+  initBtnNext();
+});
