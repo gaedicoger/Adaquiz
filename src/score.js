@@ -46,10 +46,12 @@ if (indexUserAnswer === correctIndex) {
     score +=1;
   }
 }
-  
-//Récupérer le bouton réponse:
-//Récupérer mes indexs:
-//currentIndex / 
+
+//Récupérer les boutons réponses :
+//Pour chaque click sur un bouton réponse:
+//Récupérer l'index de la réponses choisie:
+//Appeler calcul score:
+
 
 // ===========================================================================
 // ==============================  FINISH ==========================================
