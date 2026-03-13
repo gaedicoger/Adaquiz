@@ -14,7 +14,7 @@ import { startQuiz } from "./quiz-display.js";
 // ========================= AFFICHAGE PAR DEFAUT ==========================
 
 //* récupérer les écrans
-const displayStartScreen = document.querySelector(".start-screen");
+const displayStartScreen = document.querySelector(".welcome");
 const displayQuizScreen = document.querySelector("#app");
 const displayEndScreen = document.querySelector(".endScreen");
 
@@ -26,7 +26,7 @@ displayEndScreen.classList.add("hidden");
 // ======================= Ecran d'acceuil =========================
 
 //* affichage titre quizz sur écran d'acceuil
-document.querySelector(".quiz-title > h1").innerText = quiz.title;
+document.querySelector(".welcome > h1").innerText = quiz.title;
 
 //* récupérer le bouton "démarrer"
 const startButton = document.getElementById("startButton");

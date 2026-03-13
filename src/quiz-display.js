@@ -9,7 +9,7 @@ const questionElement = document.getElementById("currentQuestion");
 const answerButtons = document.querySelectorAll(".buttonA");
 
 // variable pour savoir quelle question est affichée
-export let currentQuestionIndex = 0;
+export let currentQuestionIndex = 0; //todo : éviter vode en dur?
 
 // ==================== FONCTION POUR LANCER LE QUIZ ====================
 export function startQuiz() {
