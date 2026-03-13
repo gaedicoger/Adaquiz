@@ -8,6 +8,8 @@ import quiz from "./quiz-femmes-scientifiques.json";
 import { initBtnNext } from "./btn-next-question.js";
 import { questionSuivante } from "./progression.js"; // syntaxe à favoriser pour cibler une fonction définie dans le .js, permet de minimiser le nombre d'import
 
+//Penser à cacher l'écran de fin par défaut:
+
 // Affichage titre quizz sur écran d'acceuil (+ écran questions ?)
 document.querySelector(".welcome > h1").innerText = quiz.title;
 questionSuivante();
