@@ -24,9 +24,9 @@ btnRetry.addEventListener("click", (retryQuiz) => {
 function retryQuiz() {
   // Quand l’utilisateur clique sur "Recommencer":
   score = 0; // réinitialiser le score,
-  // GO: inutile lindex de la réponse ne s'affiche quand le quiz est commencé en lien avec les questions:
+  // GO: inutile l'index de la réponse ne s'affiche quand le quiz est commencé en lien avec les questions:
   // réinitialiser l'index des questions //* let indexAnswers
-  // vider le localStorage (bonus)
+  // vider le localStorage (bonus) pourquoi faire alors qu'on veut concerver justement un historique des score grâce au local storage ?
   const endScreen = document.querySelector("endScreen");
   endScreen.classList.add("hidden"); //masquer l’écran de fin
   startQuiz(); //Afficher l'écran start // cacher le bouton "Question suivante"
