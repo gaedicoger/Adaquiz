@@ -16,19 +16,16 @@ questionContainer.appendChild(resultButton);
 
 // ================= INITIALISATION =================
 export function initBtnNext() {
-  // cacher le bouton next au départ
-  nextButton.classList.add("hidden");
+  nextButton.classList.add("hidden"); // cacher le bouton next au départ
 
   // ================= clic sur une réponse =================
-  for (let i = 0; i < answerButtons.length; i++) {
-    answerButtons[i].addEventListener("click", function () {
+  for (let index = 0; index < answerButtons.length; index++) {
+    answerButtons[index].addEventListener("click", function () {
       // dernière question ?
       if (currentQuestionIndex === quiz.questions.length - 1) {
-        // afficher le bouton Résultat
-        resultButton.classList.remove("hidden");
+        resultButton.classList.remove("hidden"); // afficher le bouton Résultat
       } else {
-        // afficher le bouton Next
-        nextButton.classList.remove("hidden");
+        nextButton.classList.remove("hidden"); // afficher le bouton Next
       }
     });
   }
@@ -42,7 +39,7 @@ export function initBtnNext() {
 
   // ================= clic sur bouton Résultat =================
   resultButton.addEventListener("click", function () {
-    // ici tu peux appeler la fonction de score / écran final
+    // appeler la fonction de score / écran final
     alert("Afficher le score / écran final");
   });
 }

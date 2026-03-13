@@ -13,12 +13,8 @@ export let currentQuestionIndex = 0;
 
 // ==================== FONCTION POUR LANCER LE QUIZ ====================
 export function startQuiz() {
-  // masquer écran d'accueil
-  startScreen.classList.add("hidden");
-
-  // afficher écran quiz
-  quizScreen.classList.remove("hidden");
-
+  startScreen.classList.add("hidden"); // masquer écran d'accueil
+  quizScreen.classList.remove("hidden"); // afficher écran quiz
   // afficher la première question
   showQuestion();
 }
@@ -26,9 +22,7 @@ export function startQuiz() {
 // ==================== FONCTION POUR AFFICHER UNE QUESTION ====================
 export function showQuestion() {
   const question = quiz.questions[currentQuestionIndex];
-
-  // afficher la question
-  questionElement.innerText = question.question;
+  questionElement.innerText = question.question; // afficher la question
 
   // remplir les boutons avec les réponses
   for (let index = 0; index < question.options.length; index++) {
