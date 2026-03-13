@@ -1,8 +1,19 @@
-//importer les fonctions requises :
-//import startQuiz from "./btn-next-questions.js";
+// ============================= IMPORTS ======================================
+//import startQuiz from "./quiz-display.js";
+
+// ===========================================================================
+// ==============================  START ==========================================
+// ===========================================================================
 
 //Fonction de démarrage du quizz :
 function startScreen() {
   const startButton = document.getElementById("startButton"); //Récupérer le bouton start
-  startButton.addEventListener("click", startQuiz());
-} //Ecouter le bouton et renvoyer vers la fonction d'affichage des questions
+  const welcome = document.querySelector(".welcome"); //récupérer la div welcome
+  startButton.addEventListener("click", () => {
+    //Ajouter un event et pas un click pour caché le bouton démarrer et ensuite appeler la fonction startquiz
+    welcome.classList.add("hidden");
+    startQuiz();
+  });
+}
+
+startScreen();

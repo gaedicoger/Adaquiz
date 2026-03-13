@@ -13,19 +13,21 @@ const btnRetry = document.getElementById("retryQuiz");
 
 - écouter le bouton et déclencher la fonction
 
-btnRetry.addEventListener("click", () => {
-    nomFonction();
+btnRetry.addEventListener("click", (retryQuiz) => {
+    retryQuiz();
     });
 
 */
 
 //! Création d'une fonction qui sera ensuite utilisée dans main.js
 
-// Quand l’utilisateur clique sur "Recommencer"
-// réinitialiser l'index des questions //* let indexAnswers
-// réinitialiser le score à 0 //* let score = 0
-// vider le localStorage (bonus)
-// masquer l’écran de fin
-// masquer barre de progression //* let questionActuelle
-// afficher l’écran de quiz
-// cacher le bouton "Question suivante"
+export function retryQuiz() {
+  // Quand l’utilisateur clique sur "Recommencer":
+  score = 0; // réinitialiser le score,
+  // GO: inutile l'index de la réponse ne s'affiche quand le quiz est commencé en lien avec les questions:
+  // réinitialiser l'index des questions //* let indexAnswers
+  // vider le localStorage (bonus) pourquoi faire alors qu'on veut concerver justement un historique des score grâce au local storage
+  const endScreen = document.querySelector("endScreen");
+  endScreen.classList.add("hidden"); //masquer l’écran de fin
+  startQuiz(); //Afficher l'écran start // cacher le bouton "Question suivante"
+}
