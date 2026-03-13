@@ -1,3 +1,5 @@
+// ================================== BOUTON NEXT QUESTION ==================================
+
 /* JS Page questions :
 - Le bouton « Question suivante » doit être caché par défaut :
   - il s'affiche quand l'utilisateur clique sur une réponse
