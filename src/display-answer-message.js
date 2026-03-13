@@ -1,9 +1,14 @@
+//PAGE INTERMEDIAIRE AVEC FONCTIONS A DEPLACER :
+
 // ============================= IMPORTS ======================================
-import score from {"./main.js"}
+//import { score } from "./main.js";
+//On ne peut que lire une variable quand on l'importe. Du coup on doit mettre score et sa fonction d'incrémentation dans main.js
 
+//A DEPLACER DANS main.js :
 // ============================= VARIABLES ====================================
-//récupérer les index ?
-
+//Récupérer et stocker les deux index dans une variable:  doit être dans main.js avec la fonction calcul de score
+let indexUserAnswer =; //le chemin correspondant à l'index du bouton sur lequle l'utilisateur à cliqué.
+let correctIndex = //le chemin correspondant au correctIndex correspondant à la question
 //Fonction calcul du score:
 /**
  *
@@ -16,6 +21,9 @@ export function calculScore(indexUserAnswer, correctIndex) {
     score += 1;
   }
 }
+//A DEPLACER DANS QUIZ-DISPLAY:
+// ============================= IMPORTS ======================================
+//import { correctIndex } from "./main.js";
 
 //Fonction affichage des bonnes et des mauvaises réponses :
 /**
@@ -37,6 +45,5 @@ export function displayAnswerMessage(indexUserAnswer, correctIndex) {
     messageText.textContent = "❌ Mauvaise réponse...";
     messageText.style.color = "salmon";
   }
-  // @ts-ignore
   answerMessage.appendChild(messageText);
 }

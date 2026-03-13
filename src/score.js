@@ -1,6 +1,6 @@
 // ============================= IMPORTS ======================================
-import quiz from "./quiz-femmes-scientifiques.json";
-import score from "./main.js";
+//import quiz from "./quiz-femmes-scientifiques.json";
+//import score from "./main.js";
 
 // ============================= VARIABLES ====================================
 //Stocker le nombre de questions en tout:
