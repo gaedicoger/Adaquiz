@@ -31,10 +31,6 @@ export function nextQuestion() {
   }
 }
 
-//A DEPLACER DANS QUIZ-DISPLAY:
-// ============================= IMPORTS ======================================
-//import { correctIndex } from "./main.js";
-
 //Fonction affichage des bonnes et des mauvaises réponses :
 /**
  *

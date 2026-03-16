@@ -1,13 +1,12 @@
 // ============================= IMPORTS ======================================
 import { displayAnswerMessage } from "./quiz-display.js";
+
 //On ne peut que lire une variable quand on l'importe. Du coup on doit mettre score et sa fonction d'incrémentation dans main.js
 
-//A DEPLACER DANS main.js :
 // ============================= VARIABLES ====================================
 //Récupérer et stocker les deux index dans une variable:  doit être dans main.js avec la fonction calcul de score
-let indexUserAnswer = //le chemin correspondant à l'index du bouton sur lequel l'utilisateur à cliqué.
-let correctIndex = //le chemin correspondant au correctIndex correspondant à la question.
-let score = 0;
+
+export let score = 0;
 
 //Fonction calcul du score:
 /**
@@ -20,5 +19,5 @@ export function calculScore(indexUserAnswer, correctIndex) {
   if (indexUserAnswer === correctIndex) {
     score += 1;
   }
-  displayAnswerMessage (indexUserAnswer, correctIndex);
+  displayAnswerMessage(indexUserAnswer, correctIndex);
 }

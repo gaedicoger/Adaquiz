@@ -2,6 +2,7 @@
 
 import quiz from "./quiz-femmes-scientifiques.json";
 import { nextQuestion, currentQuestionIndex } from "./quiz-display.js";
+import { calculScore } from "./calcul-score.js";
 
 // récupérer les éléments HTML
 const nextButton = document.getElementById("next-question");
@@ -43,3 +44,12 @@ export function initBtnNext() {
     alert("Afficher le score / écran final");
   });
 }
+
+// ================= clic sur bouton Réponse =================
+answerButtons[index].addEventListener("click", function () {
+  const indexUserAnswer = Number(answerButtons[index].dataset.index);
+  const correctIndex = quiz.questions[currentQuestionIndex].correctIndex;
+
+  calculScore(indexUserAnswer, correctIndex);
+  displayAnswerMessage(indexUserAnswer, correctIndex);
+});

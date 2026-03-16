@@ -3,13 +3,19 @@
 // Import
 
 import "./style.css";
-// import "./start.js";
+import "./start.js";
+import "./btn-next-question.js";
+import "./btn-retry-quiz.js";
+import "./calcul-score.js";
+import "./display-end-screen.js";
+import "./progression.js";
+import "./quiz-display.js";
 import quiz from "./quiz-femmes-scientifiques.json";
 
 //! les import ci-dessous suppriment le style CSS de Vite....
-import { initBtnNext } from "./btn-next-question.js";
-import { questionSuivante } from "./progression.js"; // syntaxe à favoriser pour cibler une fonction définie dans le .js, permet de minimiser le nombre d'import
-import { startQuiz } from "./quiz-display.js";
+//import { initBtnNext } from "./btn-next-question.js";
+//import { questionSuivante } from "./progression.js"; // syntaxe à favoriser pour cibler une fonction définie dans le .js, permet de minimiser le nombre d'import
+//import { startQuiz } from "./quiz-display.js";
 
 // ========================= AFFICHAGE PAR DEFAUT ==========================
 
