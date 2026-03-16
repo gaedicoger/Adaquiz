@@ -7,6 +7,8 @@ import { initBtnNext } from "./btn-next-question.js";
 // ==============================  START ==========================================
 // ===========================================================================
 
+const displayQuizScreen = document.querySelector("#questions-container");
+
 //Fonction de démarrage du quizz :
 export function startScreen() {
   const startButton = document.getElementById("startButton"); //Récupérer le bouton start
@@ -21,4 +23,4 @@ export function startScreen() {
   });
 }
 
-//startScreen();
+startScreen();

@@ -45,6 +45,7 @@ export function initBtnNext() {
   });
 }
 
+let index = 0;
 // ================= clic sur bouton Réponse =================
 answerButtons[index].addEventListener("click", function () {
   const indexUserAnswer = Number(answerButtons[index].dataset.index);
