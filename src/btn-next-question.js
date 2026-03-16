@@ -1,7 +1,7 @@
 // ================================== BOUTON NEXT QUESTION ==================================
 
-import { nextQuestion, currentQuestionIndex } from "./quiz-display.js";
 import quiz from "./quiz-femmes-scientifiques.json";
+import { nextQuestion, currentQuestionIndex } from "./quiz-display.js";
 
 // récupérer les éléments HTML
 const nextButton = document.getElementById("next-question");

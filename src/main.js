@@ -30,22 +30,4 @@ displayEndScreen.classList.add("hidden");
 //* affichage titre quizz sur écran d'acceuil
 document.querySelector(".welcome > h1").innerText = quiz.title;
 
-//* récupérer le bouton "démarrer"
-const startButton = document.getElementById("startButton");
-
 // ========================= Ecran quizz ===========================
-
-startButton.addEventListener("click", function () {
-  // cacher l'écran d'accueil
-  displayStartScreen.classList.add("hidden");
-
-  // afficher l'écran quiz
-  displayQuizScreen.classList.remove("hidden");
-  document.querySelector(".questions > header > h1").innerText = quiz.title;
-
-  // lancer le quiz (affiche la première question)
-  startQuiz();
-
-  // initialiser le bouton Next + bouton Résultat
-  initBtnNext();
-});
