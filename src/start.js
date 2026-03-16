@@ -1,19 +1,24 @@
 // ============================= IMPORTS ======================================
-//import startQuiz from "./quiz-display.js";
+import quiz from "./quiz-femmes-scientifiques.json";
+import { showQuestion } from "./quiz-display.js";
+import { initBtnNext } from "./btn-next-question.js";
 
 // ===========================================================================
 // ==============================  START ==========================================
 // ===========================================================================
 
 //Fonction de démarrage du quizz :
-function startScreen() {
+export function startScreen() {
   const startButton = document.getElementById("startButton"); //Récupérer le bouton start
   const welcome = document.querySelector(".welcome"); //récupérer la div welcome
   startButton.addEventListener("click", () => {
     //Ajouter un event et pas un click pour caché le bouton démarrer et ensuite appeler la fonction startquiz
     welcome.classList.add("hidden");
-    startQuiz();
+    displayQuizScreen.classList.remove("hidden");
+    document.querySelector(".questions > header > h1").innerText = quiz.title;
+    showQuestion();
+    initBtnNext();
   });
 }
 
-startScreen();
+//startScreen();
