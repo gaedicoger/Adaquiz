@@ -6,6 +6,9 @@ import quiz from "./quiz-femmes-scientifiques.json";
 const questionElement = document.getElementById("currentQuestion");
 const answerButtons = document.querySelectorAll(".buttonA");
 
+export const answerMessage = document.getElementById("answerMessage");
+export const messageText = document.createElement("p");
+
 // variable pour savoir quelle question est affichée
 export let currentQuestionIndex = 0; //todo : éviter code en dur!
 

@@ -1,5 +1,7 @@
 // JS Page fin : Ecouter le bouton pour réinitialiser
 
+import { startScreen } from "./start";
+
 //todo code à introduire dans main.js :
 
 /* 
@@ -29,5 +31,5 @@ export function retryQuiz() {
   // vider le localStorage (bonus) pourquoi faire alors qu'on veut concerver justement un historique des score grâce au local storage
   const endScreen = document.querySelector("endScreen");
   endScreen.classList.add("hidden"); //masquer l’écran de fin
-  startQuiz(); //Afficher l'écran start // cacher le bouton "Question suivante"
+  startScreen(); //Afficher l'écran start // cacher le bouton "Question suivante"
 }
