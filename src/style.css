@@ -165,3 +165,20 @@ button:focus-visible {
   background: linear-gradient(90deg, #000000, #000000);
   transition: width 0.3s ease;
 }
+
+#livesDisplay {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#livesDisplay.danger {
+  color: red;
+}
+
+#lives {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}

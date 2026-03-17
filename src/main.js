@@ -11,6 +11,7 @@ import "./display-end-screen.js";
 import "./progression.js";
 import "./quiz-display.js";
 import quiz from "./quiz-femmes-scientifiques.json";
+import "./systeme-de-vie.js";
 
 //! les import ci-dessous suppriment le style CSS de Vite....
 //import { initBtnNext } from "./btn-next-question.js";
