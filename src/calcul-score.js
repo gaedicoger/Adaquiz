@@ -1,5 +1,6 @@
 // ============================= IMPORTS ======================================
 import { displayAnswerMessage } from "./quiz-display.js";
+import quiz from "./quiz-femmes-scientifiques.json";
 
 //On ne peut que lire une variable quand on l'importe. Du coup on doit mettre score et sa fonction d'incrémentation dans main.js
 
@@ -7,6 +8,7 @@ import { displayAnswerMessage } from "./quiz-display.js";
 //Récupérer et stocker les deux index dans une variable:  doit être dans main.js avec la fonction calcul de score
 
 export let score = 0;
+// export let currentQuestionIndex = 0;
 
 //Fonction calcul du score:
 /**
@@ -20,4 +22,11 @@ export function calculScore(indexUserAnswer, correctIndex) {
     score += 1;
   }
   displayAnswerMessage(indexUserAnswer, correctIndex);
+}
+let indexInitQuiz = 0;
+
+export function resetScore() {
+  score = 0;
+  let initQuiz = quiz.questions[indexInitQuiz];
+  // currentQuestionIndex = 0;
 }

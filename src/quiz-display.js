@@ -1,6 +1,7 @@
 // ================================== AFFICHAGE DU QUIZZ ==================================
 
 import quiz from "./quiz-femmes-scientifiques.json";
+// import { currentQuestionIndex } from "./calcul-score";
 
 // récupérer les éléments HTML
 const questionElement = document.getElementById("currentQuestion");

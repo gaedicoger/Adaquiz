@@ -1,14 +1,20 @@
 // ================================== BOUTON NEXT QUESTION ==================================
 
 import quiz from "./quiz-femmes-scientifiques.json";
-import { nextQuestion, currentQuestionIndex } from "./quiz-display.js";
+import {} from "./quiz-display.js";
 import { calculScore } from "./calcul-score.js";
-import { answerMessage, messageText } from "./quiz-display.js";
+import {
+  nextQuestion,
+  answerMessage,
+  messageText,
+  displayAnswerMessage,
+  currentQuestionIndex,
+} from "./quiz-display.js";
 import { endScreen } from "./display-end-screen.js";
 
 // récupérer les éléments HTML
 const nextButton = document.getElementById("next-question");
-const answerButtons = document.querySelectorAll(".buttonA");
+export const answerButtons = document.querySelectorAll(".buttonA");
 const questionContainer = document.querySelector("#questions-container");
 
 // créer le bouton Résultat (il n'existe pas dans le HTML)
