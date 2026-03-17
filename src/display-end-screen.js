@@ -5,8 +5,6 @@ import { score } from "./calcul-score.js";
 // ============================= VARIABLES ====================================
 //Stocker le nombre de questions en tout:
 const numberQuestions = quiz.questions.length;
-//Stocker le score:
-let finalScore = score;
 //Stocker le pourcentage:
 let pourcentScore = 0;
 
@@ -78,6 +76,7 @@ function displayTotalScore(finalScore, numberQuestions) {
 // ===========================================================================
 
 export function endScreen() {
+  const finalScore = score; // Récupérer la valeur finale du score au bon moment de la lecture du code!
   const endScreen = document.querySelector(".endScreen");
   endScreen.classList.remove("hidden"); //afficher l’écran de fin
   calculPourcentScore(finalScore, numberQuestions); //calculer le pourcentage de réussite

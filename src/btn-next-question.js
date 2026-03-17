@@ -51,6 +51,8 @@ export function initBtnNext() {
   // ================= clic sur bouton Résultat =================
   resultButton.addEventListener("click", function () {
     // appeler la fonction de score / écran final
-    alert("Afficher le score / écran final");
+    //cacher l'écran de questions
+    questionContainer.classList.add("hidden");
+    endScreen();
   });
 }
