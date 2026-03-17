@@ -41,7 +41,7 @@ export function initBtnNext() {
       const correctIndex = quiz.questions[currentQuestionIndex].correctIndex;
 
       calculScore(indexUserAnswer, correctIndex); //Appel de la fonction d'itération du score
-      displayAnswerMessage(indexUserAnswer, correctIndex); //Appel de la fonction d'affichage des bonnes ou mauvaises réponses
+      //displayAnswerMessage(indexUserAnswer, correctIndex); //Appel de la fonction d'affichage des bonnes ou mauvaises réponses
     });
   }
 
