@@ -1,24 +1,21 @@
-let vies = 3;
+import { initRetryButton } from "./btn-retry-quiz";
+let lives = 3;
 
-export function afficherVies() {
-  const viesElement = document.querySelector("#lives");
-  if (viesElement) {
-    viesElement.textContent = "Vies : " + vies;
-  }
+function displayLife() {
+  const lifeElement = document.querySelector("#lives");
+  lifeElement.textContent = "Vies : " + lives;
 }
 
-export function resetVies() {
-  vies = 3;
-  afficherVies();
+export function resetLife() {
+  lives = 3;
 }
 
-export function retirerVie() {
-  vies--;
-  afficherVies();
+export function lostLife() {
+  lives--;
 
-  if (vies <= 0) {
+  if (lives <= 0) {
     alert("Tu as perdu ! Le quiz recommence.");
-    resetVies();
-    location.reload();
+    resetLife();
+    initRetryButton();
   }
 }

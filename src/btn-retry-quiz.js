@@ -21,16 +21,17 @@ const btnRetry = document.getElementById("retryQuiz");
 // }
 
 // - écouter le bouton et déclencher la fonction
-
-btnRetry.addEventListener("click", () => {
-  const endScreen = document.querySelector(".endScreen");
-  endScreen.classList.add("hidden"); //masquer l’écran de fin
-  const displayQuizScreen = document.getElementById("questions-container");
-  displayQuizScreen.classList.remove("hidden");
-  answerButtons.forEach((button) => (button.disabled = false)); //Réactivé les boutons pour la question suivante
-  answerMessage.innerHTML = ``;
-  resetScore();
-  // retryQuiz();
-  showQuestion();
-  initBtnNext();
-});
+export function initRetryButton() {
+  btnRetry.addEventListener("click", () => {
+    const endScreen = document.querySelector(".endScreen");
+    endScreen.classList.add("hidden"); //masquer l’écran de fin
+    const displayQuizScreen = document.getElementById("questions-container");
+    displayQuizScreen.classList.remove("hidden");
+    answerButtons.forEach((button) => (button.disabled = false)); //Réactivé les boutons pour la question suivante
+    answerMessage.innerHTML = ``;
+    resetScore();
+    // retryQuiz();
+    showQuestion();
+    initBtnNext();
+  });
+}

@@ -153,7 +153,7 @@ button:focus-visible {
   width: 100%;
   max-width: 760px;
   height: 10px;
-  background-color: #fa00ed;
+  background-color: #8a898a;
   border-radius: 999px;
   overflow: hidden;
   margin: 20px auto 30px auto;
@@ -162,7 +162,7 @@ button:focus-visible {
 #display-progress {
   width: 0%;
   height: 100%;
-  background: linear-gradient(90deg, #000000, #000000);
+  background: linear-gradient(90deg, #a80404, #9e01db);
   transition: width 0.3s ease;
 }
 
@@ -181,4 +181,10 @@ button:focus-visible {
   font-weight: bold;
   margin: 10px 0;
   color: #333;
+}
+
+#bestScore {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 18px;
 }

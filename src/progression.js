@@ -1,17 +1,14 @@
+import quiz from "./quiz-femmes-scientifiques.json";
 // affiche d'une barre de progression en fonction du score
 
-const totalQuestions = 10; //! prendre la longueur du tableau JSON pour que ce soit adaptable
-let questionActuelle = 1; //! idem ici
+const totalQuestions = quiz.questions.length; //! prendre la longueur du tableau JSON pour que ce soit adaptable
+let currentQuestion = 0; //! idem ici
 
-function mettreAJourProgression() {
+export function updateProgressBar() {
   const barre = document.getElementById("display-progress");
-  const pourcentage = (questionActuelle / totalQuestions) * 100;
+  const pourcentage = (currentQuestion / totalQuestions) * 100;
   barre.style.width = `${pourcentage}%`;
-}
-
-export function questionSuivante() {
-  if (questionActuelle < totalQuestions) {
-    questionActuelle++;
-    mettreAJourProgression();
+  if (currentQuestion <= totalQuestions) {
+    currentQuestion++;
   }
 }

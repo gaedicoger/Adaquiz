@@ -11,6 +11,7 @@ import {
   currentQuestionIndex,
 } from "./quiz-display.js";
 import { endScreen } from "./display-end-screen.js";
+import { updateProgressBar } from "./progression.js";
 
 // récupérer les éléments HTML
 const nextButton = document.getElementById("next-question");
@@ -52,6 +53,7 @@ export function initBtnNext() {
     resultButton.classList.add("hidden"); // cacher le bouton Résultat (au cas où)
     answerMessage.innerHTML = ``;
     answerButtons.forEach((button) => (button.disabled = false)); //Réactivé les boutons pour la question suivante
+    updateProgressBar();
   });
 
   // ================= clic sur bouton Résultat =================

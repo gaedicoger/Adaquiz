@@ -1,6 +1,7 @@
 // ============================= IMPORTS ======================================
 import quiz from "./quiz-femmes-scientifiques.json";
 import { score } from "./calcul-score.js";
+import { saveBestScore, displayBestScore } from "./local-storage.js";
 
 // ============================= VARIABLES ====================================
 //Stocker le nombre de questions en tout:
@@ -9,7 +10,7 @@ const numberQuestions = quiz.questions.length;
 let pourcentScore = 0;
 
 // ===========================================================================
-// ==============================  CALCUL ==========================================
+// ==============================  CALCUL =====================================
 // ===========================================================================
 
 //Fonction transformer le score en pourcentage. selon le nombre de questions
@@ -23,7 +24,7 @@ function calculPourcentScore(finalScore, numberQuestions) {
 }
 
 // ===========================================================================
-// ==============================  DISPLAY ==========================================
+// ==============================  DISPLAY ====================================
 // ===========================================================================
 
 //Fonction pour afficher le score :
@@ -43,11 +44,11 @@ function displayScore(finalScore) {
  */
 
 function displayScoreMessage(pourcentScore) {
-  const scoreMessagePlace = document.getElementById("scoreMessage"); //récupérer l'emplacement du score
+  const scoreMessagePlace = document.getElementById("scoreMessage");
   let scoreMessage = document.createElement("p");
-  //ajouter une création de class pour gérer le style dans le CSS?
+
   if (pourcentScore === 100) {
-    scoreMessage.innerText = `Aucune erreur, c'est parfait 😎`; //Remplacer le message par le score à jour selon le score ou le pourcentage de réussite
+    scoreMessage.innerText = `Aucune erreur, c'est parfait 😎`;
   } else if (pourcentScore >= 80 && pourcentScore < 100) {
     scoreMessage.innerText = `C'est bien, tu as fait peu d'erreurs 😉`;
   } else if (pourcentScore >= 50 && pourcentScore < 80) {
@@ -57,6 +58,7 @@ function displayScoreMessage(pourcentScore) {
   } else {
     scoreMessage.innerText = `Oups ! Tu n'as trouvé aucune bonne réponse 😱`;
   }
+
   scoreMessagePlace.appendChild(scoreMessage);
 }
 
@@ -71,16 +73,21 @@ function displayTotalScore(finalScore, numberQuestions) {
   const displayTotalScore = document.getElementById("totalScore");
   displayTotalScore.innerText = ` Tu as trouvé la bonne réponse pour ${finalScore} questions sur ${numberQuestions}`;
 }
+
 // ===========================================================================
-// ==============================  FINISH ==========================================
+// ==============================  FINISH =====================================
 // ===========================================================================
 
 export function endScreen() {
-  const finalScore = score; // Récupérer la valeur finale du score au bon moment de la lecture du code!
+  const finalScore = score;
   const endScreen = document.querySelector(".endScreen");
-  endScreen.classList.remove("hidden"); //afficher l’écran de fin
-  calculPourcentScore(finalScore, numberQuestions); //calculer le pourcentage de réussite
-  displayScore(finalScore); //afficher le score final
-  displayScoreMessage(pourcentScore); //afficher le message réussite
-  displayTotalScore(finalScore, numberQuestions); //afficher le nombre de questions réussies
+
+  endScreen.classList.remove("hidden");
+  calculPourcentScore(finalScore, numberQuestions);
+  displayScore(finalScore);
+  displayScoreMessage(pourcentScore);
+  displayTotalScore(finalScore, numberQuestions);
+
+  saveBestScore(finalScore);
+  displayBestScore();
 }

@@ -1,23 +1,22 @@
 const STORAGE_KEY = "bestScore";
 
 export function saveBestScore(score) {
-  // récupérer le meilleur score enregistré
-  const bestScore = localStorage.getItem(STORAGE_KEY);
+  const bestScore = Number(localStorage.getItem(STORAGE_KEY));
 
-  // si aucun score ou score actuel plus grand
-  if (!bestScore || score > bestScore) {
+  if (score > bestScore) {
     localStorage.setItem(STORAGE_KEY, score);
   }
 }
 
 export function displayBestScore() {
   const bestScore = localStorage.getItem(STORAGE_KEY);
-
-  if (!bestScore) return;
-
   const bestScoreElement = document.querySelector("#bestScore");
 
   if (bestScoreElement) {
-    bestScoreElement.textContent = "Meilleur score : " + bestScore;
+    if (bestScore) {
+      bestScoreElement.textContent = "Meilleur score : " + bestScore;
+    } else {
+      bestScoreElement.textContent = "Meilleur score : 0";
+    }
   }
 }
