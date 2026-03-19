@@ -3,7 +3,7 @@
 // imports
 
 import quiz from "./quiz-femmes-scientifiques.json";
-import { loseLife } from "./systeme-de-vie";
+import { loseLife } from "./life-counter";
 
 // DOM
 const questionElement = document.getElementById("current-question");

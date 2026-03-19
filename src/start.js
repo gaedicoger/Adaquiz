@@ -5,7 +5,7 @@
 import quiz from "./quiz-femmes-scientifiques.json";
 import { showQuestion } from "./quiz-display.js";
 import { initNextButton } from "./btn-next-question.js";
-import { initLives } from "./systeme-de-vie.js";
+import { initLives } from "./life-counter.js";
 
 // DOM
 

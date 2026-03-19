@@ -6,7 +6,7 @@ import { showQuestion, resetCurrentIndex } from "./quiz-display.js";
 import { initNextButton, answerButtons } from "./btn-next-question.js";
 import { resetScore } from "./calcul-score.js";
 import { resetProgressBar } from "./progression.js";
-import { resetLife } from "./systeme-de-vie.js";
+import { resetLife } from "./life-counter.js";
 
 // DOM
 
