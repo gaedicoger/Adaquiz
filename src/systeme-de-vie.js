@@ -11,6 +11,7 @@ export function initLives() {
   lives = 5;
   displayLife();
 }
+
 function displayLife() {
   const lifeElement = document.querySelector("#lives");
   if (lifeElement) {
@@ -18,10 +19,9 @@ function displayLife() {
   }
 }
 
-export function resetLife() {
-  lives = 5;
-  displayLife();
-}
+/**
+ * - décrémente vie à chaque mauvaise réponse
+ */
 
 export function lostLife() {
   lives--;
@@ -31,4 +31,9 @@ export function lostLife() {
     alert("Tu as perdu ! Le quiz recommence.");
     retryQuiz();
   }
+}
+
+export function resetLife() {
+  lives = 5;
+  displayLife();
 }

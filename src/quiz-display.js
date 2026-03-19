@@ -1,4 +1,4 @@
-// ================================== ECRAN QUIZ ==================================
+// ============================= ECRAN QUIZ =================================
 
 // imports
 
@@ -8,15 +8,14 @@ import { lostLife } from "./systeme-de-vie";
 // DOM
 const questionElement = document.getElementById("currentQuestion");
 const answerButtons = document.querySelectorAll(".buttonA");
-
-// variable
 export const answerMessage = document.getElementById("answerMessage");
 export const messageText = document.createElement("p");
-export let currentQuestionIndex = 0;
 
-// ==================== INITIALISATION QUIZ ====================
+// ============================= DISPLAY =============================
 
 // affichage écran quiz géré par fonction showQuizScreen() dans start.js
+
+export let currentQuestionIndex = 0;
 
 /**
  * - affiche la question
@@ -65,6 +64,8 @@ export function displayAnswerMessage(indexUserAnswer, correctIndex) {
     lostLife();
   }
 }
+
+// ======================== REINITIALISATION =========================
 
 export function resetCurrentIndex() {
   currentQuestionIndex = 0;
