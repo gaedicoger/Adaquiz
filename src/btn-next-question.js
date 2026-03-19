@@ -15,7 +15,7 @@ import { updateProgressBar } from "./progression.js";
 // DOM
 const nextButton = document.getElementById("next-question");
 export const answerButtons = document.querySelectorAll(".buttonA");
-const questionContainer = document.querySelector("#questions-container");
+const questionContainer = document.querySelector(".quiz-screen");
 
 // DOM : créer le bouton Résultat (il n'existe pas dans le HTML)
 const resultButton = document.createElement("button");

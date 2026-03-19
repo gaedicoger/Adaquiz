@@ -28,7 +28,7 @@ export function retryQuiz() {
   endScreen.classList.add("hidden"); //masquer l’écran de fin
   const answerMessage = document.getElementById("answerMessage");
   answerMessage.innerHTML = ``;
-  const displayQuizScreen = document.getElementById("questions-container");
+  const displayQuizScreen = document.querySelector("quiz-screen");
   displayQuizScreen.classList.remove("hidden");
   answerButtons.forEach((button) => (button.disabled = false));
   resetLife();
