@@ -10,7 +10,7 @@ import { initLives } from "./systeme-de-vie.js";
 // DOM
 
 const displayQuizScreen = document.querySelector("#questions-container");
-const startButton = document.getElementById("startButton"); //Récupérer le bouton start
+const startButton = document.getElementById("start-button"); //Récupérer le bouton start
 
 // écoute bouton démarrer
 
