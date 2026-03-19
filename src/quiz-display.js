@@ -1,7 +1,7 @@
 // ================================== AFFICHAGE DU QUIZZ ==================================
 
 import quiz from "./quiz-femmes-scientifiques.json";
-import { lostLife } from "./systeme-de-vie";
+//import { lostLife } from "./systeme-de-vie";
 // import { currentQuestionIndex } from "./calcul-score";
 
 // récupérer les éléments HTML
@@ -55,7 +55,11 @@ export function displayAnswerMessage(indexUserAnswer, correctIndex) {
   } else {
     messageText.textContent = "❌ Mauvaise réponse...";
     messageText.style.color = "salmon";
-    lostLife();
+    //lostLife();
   }
   answerMessage.appendChild(messageText);
+}
+
+export function resetCurrentIndex() {
+  currentQuestionIndex = 0;
 }

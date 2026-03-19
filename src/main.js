@@ -9,10 +9,11 @@ import "./display-end-screen.js";
 import "./progression.js";
 import "./local-storage.js";
 
-// import quiz from "./quiz-femmes-scientifiques.json";
+import quiz from "./quiz-femmes-scientifiques.json";
+
 // import { startQuiz } from "./quiz-display.js";
 // import {s resetScore } from "./calcul-score.js";
-import { initLives, resetLife } from "./systeme-de-vie.js";
+//import { initLives, resetLife } from "./systeme-de-vie.js";
 
 // ========================= AFFICHAGE PAR DEFAUT ==========================
 
@@ -35,10 +36,10 @@ document.querySelector(".welcome > h1").innerText = quiz.title;
 // ========================= Ecran quizz ===========================
 
 // initialisation des vies au chargement
-initLives();
+//initLives();
 
 // fonction pour relancer le quiz
-export function restartQuiz() {
+/*export function restartQuiz() {
   resetScore();
   resetLife();
 
@@ -47,4 +48,4 @@ export function restartQuiz() {
   displayQuizScreen.classList.remove("hidden");
 
   startQuiz();
-}
+}*/

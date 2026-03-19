@@ -25,16 +25,16 @@ const displayQuizScreen = document.querySelector("#questions-container");
 
 // startScreen();
 
-export function startScreen() {
-  showQuestion();
-  initBtnNext();
-}
-
+const startButton = document.getElementById("startButton"); //Récupérer le bouton start
 startButton.addEventListener("click", () => {
-  const startButton = document.getElementById("startButton"); //Récupérer le bouton start
   const welcome = document.querySelector(".welcome"); //récupérer la div welcome
   welcome.classList.add("hidden");
   displayQuizScreen.classList.remove("hidden");
   document.querySelector(".questions > header > h1").innerText = quiz.title;
   startScreen();
 });
+
+export function startScreen() {
+  showQuestion();
+  initBtnNext();
+}

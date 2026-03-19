@@ -24,10 +24,14 @@ resultButton.innerText = "Résultat";
 resultButton.classList.add("button", "hidden");
 questionContainer.appendChild(resultButton);
 
+//let isIntialized = false;
+
 // ================= INITIALISATION =================
 export function initBtnNext() {
+  //if (isInitialized) return; // 👈 ne pas réinitialiser si déjà fait
+  //isInitialized = true;
   nextButton.classList.add("hidden"); // cacher le bouton next au départ
-
+  resultButton.classList.add("hidden");
   // ================= clic sur une réponse =================
   for (let index = 0; index < answerButtons.length; index++) {
     answerButtons[index].addEventListener("click", function () {

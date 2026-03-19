@@ -1,4 +1,5 @@
-import { restartQuiz } from "./main";
+/*import { retryQuiz } from "./btn-retry-quiz";
+//import { restartQuiz } from "./main";
 
 let lives = 3;
 
@@ -25,6 +26,7 @@ export function lostLife() {
 
   if (lives <= 0) {
     alert("Tu as perdu ! Le quiz recommence.");
-    restartQuiz();
+    retryQuiz();
   }
 }
+*/
