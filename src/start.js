@@ -23,10 +23,9 @@ startButton.addEventListener("click", () => {
 });
 
 /**
- * showQuizScreen() permet :
- * - d'afficher l'écran de quiz
- * - d'initialiser le bouton question suivante
- * - d'initialiser le nombre de vies
+ * affiche l'écran de quiz
+ * initialise le bouton question suivante
+ * initialise nombre de vies
  */
 
 export function showQuizScreen() {
