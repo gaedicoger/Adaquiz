@@ -4,7 +4,7 @@
 
 import quiz from "./quiz-femmes-scientifiques.json";
 import {
-  nextQuestion,
+  moveToNextQuestion,
   answerMessage,
   currentQuestionIndex,
 } from "./quiz-display.js";
@@ -26,12 +26,12 @@ questionContainer.appendChild(resultButton);
 // ==================== INITIALISATION ====================
 
 /**
- * initBtnNext() permet de :
- * - masquer les boutons question suivante et résultat
- * - désactiver les boutons réponses
+ * initNextButton() permet :
+ * - de masquer les boutons question suivante et résultat
+ * - de désactiver les boutons réponses
  */
 
-export function initBtnNext() {
+export function initNextButton() {
   nextButton.classList.add("hidden");
   resultButton.classList.add("hidden"); // ← le fix du bug retry
   answerButtons.forEach((button) => (button.disabled = false));
@@ -40,7 +40,7 @@ export function initBtnNext() {
 // ==================== EVENT CLICK ====================
 
 // bouton réponse
-//! (en dehors de initBtnNext, branché une seule fois au chargement)
+//! (en dehors de initNextButton, branché une seule fois au chargement)
 
 for (let i = 0; i < answerButtons.length; i++) {
   answerButtons[i].addEventListener("click", function () {
@@ -59,7 +59,7 @@ for (let i = 0; i < answerButtons.length; i++) {
 // écoute bouton question suivante
 
 nextButton.addEventListener("click", function () {
-  nextQuestion();
+  moveToNextQuestion();
   nextButton.classList.add("hidden");
   resultButton.classList.add("hidden");
   answerMessage.innerHTML = ``;
