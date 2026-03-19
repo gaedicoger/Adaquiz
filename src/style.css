@@ -101,7 +101,7 @@ button:focus-visible {
   gap: 1rem;
 }
 
-#answerMessage {
+#answer-message {
   font-size: 22px;
   display: flex;
   justify-content: center;
