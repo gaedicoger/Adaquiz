@@ -19,7 +19,7 @@ export let currentQuestionIndex = 0;
 // affichage écran quiz géré par fonction showQuizScreen() dans start.js
 
 /**
- * Afficher la question
+ * - affiche la question
  */
 
 export function showQuestion() {

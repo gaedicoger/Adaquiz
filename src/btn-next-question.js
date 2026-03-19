@@ -26,8 +26,8 @@ questionContainer.appendChild(resultButton);
 // ==================== INITIALISATION ====================
 
 /**
- * masque boutons question suivante et résultat
- * désactive boutons réponses
+ * - masque boutons question suivante et résultat
+ * - désactive boutons réponses
  */
 
 export function initNextButton() {
