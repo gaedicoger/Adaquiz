@@ -46,4 +46,5 @@ src/
 
 ## 👥 Équipe
 
-Projet réalisé dans le cadre de la formation [nom promo] — groupe de [noms].
+Projet réalisé dans le cadre de la formation Ada Tech School promotion Gisèle Halimi Nantes
+Apprenant(e)s : Gaédic, Mathis, Elodie.
