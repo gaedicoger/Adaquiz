@@ -137,7 +137,7 @@ src
 ├── style.css
 ├── quiz-femmes-scientifiques.json
 │
-├── startScreen.js
+├── showStartScreen.js
 ├── questionScreen.js
 ├── endScreen.js
 ├── buttons.js
@@ -146,14 +146,14 @@ src
 
 ### Description des fichiers
 
-| Fichier           | Rôle                                                 |
-| ----------------- | ---------------------------------------------------- |
-| main.js           | Point d'entrée de l'application                      |
-| startScreen.js    | Gestion de l'écran d'accueil                         |
-| questionScreen.js | Affichage des questions                              |
-| endScreen.js      | Affichage de l'écran final                           |
-| buttons.js        | Gestion des événements des boutons                   |
-| quizState.js      | Gestion de l'état du quiz (score, question actuelle) |
+| Fichier            | Rôle                                                 |
+| ------------------ | ---------------------------------------------------- |
+| main.js            | Point d'entrée de l'application                      |
+| showStartScreen.js | Gestion de l'écran d'accueil                         |
+| questionScreen.js  | Affichage des questions                              |
+| endScreen.js       | Affichage de l'écran final                           |
+| buttons.js         | Gestion des événements des boutons                   |
+| quizState.js       | Gestion de l'état du quiz (score, question actuelle) |
 
 ---
 

@@ -15,7 +15,7 @@ export const messageText = document.createElement("p");
 export let currentQuestionIndex = 0; //todo : éviter code en dur!
 
 // ==================== FONCTION POUR LANCER LE QUIZ ====================
-// fonctionnalité développée dans start.js function startScreen ()
+// fonctionnalité développée dans start.js function showStartScreen ()
 
 // ==================== FONCTION POUR AFFICHER UNE QUESTION ====================
 export function showQuestion() {
