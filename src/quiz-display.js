@@ -7,7 +7,7 @@ import { loseLife } from "./systeme-de-vie";
 
 // DOM
 const questionElement = document.getElementById("current-question");
-const answerButtons = document.querySelectorAll(".buttonA");
+const answerButtons = document.querySelectorAll(".answer-button");
 export const answerMessage = document.getElementById("answer-message");
 export const messageText = document.createElement("p");
 
