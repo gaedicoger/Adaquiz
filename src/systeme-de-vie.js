@@ -1,7 +1,6 @@
-/*import { retryQuiz } from "./btn-retry-quiz";
-//import { restartQuiz } from "./main";
+import { retryQuiz } from "./btn-retry-quiz.js";
 
-let lives = 3;
+let lives = 5;
 
 function displayLife() {
   const lifeElement = document.querySelector("#lives");
@@ -11,12 +10,12 @@ function displayLife() {
 }
 
 export function initLives() {
-  lives = 3;
+  lives = 5;
   displayLife();
 }
 
 export function resetLife() {
-  lives = 3;
+  lives = 5;
   displayLife();
 }
 
@@ -29,4 +28,3 @@ export function lostLife() {
     retryQuiz();
   }
 }
-*/

@@ -1,7 +1,7 @@
 // ================================== AFFICHAGE DU QUIZZ ==================================
 
 import quiz from "./quiz-femmes-scientifiques.json";
-//import { lostLife } from "./systeme-de-vie";
+import { lostLife } from "./systeme-de-vie";
 // import { currentQuestionIndex } from "./calcul-score";
 
 // récupérer les éléments HTML
@@ -44,10 +44,6 @@ export function nextQuestion() {
  */
 
 export function displayAnswerMessage(indexUserAnswer, correctIndex) {
-  const answerMessage = document.getElementById("answerMessage");
-  const messageText = document.createElement("p");
-  //ajouter une création de class pour gérer le style dans le CSS?
-
   if (indexUserAnswer === correctIndex) {
     //Comparer les index pour voir la bonne réponse
     messageText.textContent = "✅ Bonne réponse !";
@@ -55,9 +51,12 @@ export function displayAnswerMessage(indexUserAnswer, correctIndex) {
   } else {
     messageText.textContent = "❌ Mauvaise réponse...";
     messageText.style.color = "salmon";
-    //lostLife();
   }
   answerMessage.appendChild(messageText);
+
+  if (indexUserAnswer !== correctIndex) {
+    lostLife();
+  }
 }
 
 export function resetCurrentIndex() {

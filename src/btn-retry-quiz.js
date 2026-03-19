@@ -4,12 +4,13 @@
 // import { startScreen } from "./start";
 import {
   showQuestion,
-  answerMessage,
+  // answerMessage,
   resetCurrentIndex,
 } from "./quiz-display.js";
 import { initBtnNext, answerButtons } from "./btn-next-question.js";
 import { resetScore } from "./calcul-score.js";
 import { resetProgressBar } from "./progression.js";
+import { resetLife } from "./systeme-de-vie.js";
 // récupérer les éléments
 
 const btnRetry = document.getElementById("retryQuiz");
@@ -27,15 +28,21 @@ const btnRetry = document.getElementById("retryQuiz");
 export function retryQuiz() {
   const endScreen = document.querySelector(".endScreen");
   endScreen.classList.add("hidden"); //masquer l’écran de fin
-  resetScore();
-  resetCurrentIndex();
-  initBtnNext();
+  const answerMessage = document.getElementById("answerMessage");
+  answerMessage.innerHTML = ``;
+  console.log(answerMessage);
+
   const displayQuizScreen = document.getElementById("questions-container");
   displayQuizScreen.classList.remove("hidden");
-  answerButtons.forEach((button) => (button.disabled = false)); //Réactivé les boutons pour la question suivante
-  answerMessage.innerHTML = ``;
-  showQuestion();
+  answerButtons.forEach((button) => (button.disabled = false)); //Réactiver les boutons questions
+  resetLife();
+  resetScore();
+  resetCurrentIndex();
   resetProgressBar();
+
+  initBtnNext();
+
+  showQuestion();
 }
 
 // - écouter le bouton et déclencher la fonction
