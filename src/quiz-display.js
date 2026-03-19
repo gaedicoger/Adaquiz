@@ -18,6 +18,10 @@ export let currentQuestionIndex = 0;
 
 // affichage écran quiz géré par fonction showQuizScreen() dans start.js
 
+/**
+ * Afficher la question
+ */
+
 export function showQuestion() {
   const question = quiz.questions[currentQuestionIndex];
   questionElement.innerText = question.question; // afficher la question
@@ -27,6 +31,10 @@ export function showQuestion() {
     answerButtons[i].innerText = question.options[i];
   }
 }
+
+/**
+ * Passer à la question suivante
+ */
 
 export function moveToNextQuestion() {
   if (currentQuestionIndex < quiz.questions.length - 1) {
