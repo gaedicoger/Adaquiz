@@ -13,7 +13,7 @@ import { showEndScreen } from "./display-end-screen.js";
 import { updateProgressBar } from "./progression.js";
 
 // DOM
-const nextButton = document.getElementById("next-question");
+const nextButton = document.getElementById("next-question-button");
 export const answerButtons = document.querySelectorAll(".buttonA");
 const questionContainer = document.querySelector(".quiz-screen");
 
