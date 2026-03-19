@@ -26,9 +26,8 @@ questionContainer.appendChild(resultButton);
 // ==================== INITIALISATION ====================
 
 /**
- * initNextButton() permet :
- * - de masquer les boutons question suivante et résultat
- * - de désactiver les boutons réponses
+ * masque boutons question suivante et résultat
+ * désactive boutons réponses
  */
 
 export function initNextButton() {
