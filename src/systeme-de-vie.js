@@ -1,6 +1,21 @@
+// ========================= SYSTEME DE VIE =============================
+
+// imports
+
 import { retryQuiz } from "./btn-retry-quiz.js";
 
-let lives = 5;
+// ============================= DISPLAY =================================
+
+function displayLife() {
+  const lifeElement = document.querySelector("#lives");
+  if (lifeElement) {
+    lifeElement.textContent = "Vies : " + lives;
+  }
+}
+
+// ============================= CALCUL =================================
+
+// initialisation
 
 /**
  * - initialise nombre de vies
@@ -12,12 +27,9 @@ export function initLives() {
   displayLife();
 }
 
-function displayLife() {
-  const lifeElement = document.querySelector("#lives");
-  if (lifeElement) {
-    lifeElement.textContent = "Vies : " + lives;
-  }
-}
+// gestion vie
+
+let lives = 5;
 
 /**
  * - décrémente vie à chaque mauvaise réponse
@@ -31,6 +43,8 @@ export function lostLife() {
     retryQuiz();
   }
 }
+
+// ============================= RESET =================================
 
 export function resetLife() {
   lives = 5;
