@@ -47,7 +47,7 @@ function calculPourcentScore(finalScore, numberQuestions) {
 // Score final
 
 function displayScore(finalScore) {
-  let resultScore = document.getElementById("resultScore");
+  let resultScore = document.getElementById("result-score");
   resultScore.innerText = `Ton score est de ${finalScore} points`;
 }
 
