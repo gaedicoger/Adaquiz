@@ -4,7 +4,7 @@
 
 import quiz from "./quiz-femmes-scientifiques.json";
 import { showQuestion } from "./quiz-display.js";
-import { initBtnNext } from "./btn-next-question.js";
+import { initNextButton } from "./btn-next-question.js";
 import { initLives } from "./systeme-de-vie.js";
 
 // DOM
@@ -31,6 +31,6 @@ startButton.addEventListener("click", () => {
 
 export function showQuizScreen() {
   showQuestion();
-  initBtnNext();
+  initNextButton();
   initLives();
 }
