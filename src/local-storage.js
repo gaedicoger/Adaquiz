@@ -23,7 +23,7 @@ export function saveBestScore(score) {
 
 export function displayBestScore() {
   const bestScore = localStorage.getItem(STORAGE_KEY);
-  const bestScoreElement = document.querySelector("#bestScore");
+  const bestScoreElement = document.querySelector("#best-score");
 
   if (bestScoreElement) {
     if (bestScore) {

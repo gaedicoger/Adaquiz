@@ -158,10 +158,10 @@ button:focus-visible {
   color: #3ca1ff;
 }
 
-#bestScore {
+#best-score {
+  font-size: 18px;
   font-weight: bold;
   margin-top: 10px;
-  font-size: 18px;
 }
 
 .logo {
