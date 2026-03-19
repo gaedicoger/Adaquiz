@@ -19,7 +19,7 @@ import { saveBestScore, displayBestScore } from "./local-storage.js";
 
 export function showEndScreen() {
   const finalScore = score;
-  const endScreen = document.querySelector(".endScreen");
+  const endScreen = document.querySelector(".end-screen");
   endScreen.classList.remove("hidden");
   calculPourcentScore(finalScore, numberQuestions);
   displayScore(finalScore);
