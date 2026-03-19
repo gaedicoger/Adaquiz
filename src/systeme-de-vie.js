@@ -35,7 +35,7 @@ let lives = 5;
  * - décrémente vie à chaque mauvaise réponse
  */
 
-export function lostLife() {
+export function loseLife() {
   lives--;
   displayLife();
   if (lives <= 0) {

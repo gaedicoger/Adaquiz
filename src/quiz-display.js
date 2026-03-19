@@ -3,7 +3,7 @@
 // imports
 
 import quiz from "./quiz-femmes-scientifiques.json";
-import { lostLife } from "./systeme-de-vie";
+import { loseLife } from "./systeme-de-vie";
 
 // DOM
 const questionElement = document.getElementById("currentQuestion");
@@ -61,7 +61,7 @@ export function displayAnswerMessage(indexUserAnswer, correctIndex) {
   answerMessage.appendChild(messageText);
 
   if (indexUserAnswer !== correctIndex) {
-    lostLife();
+    loseLife();
   }
 }
 
