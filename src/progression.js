@@ -1,4 +1,10 @@
+// =============================== PROGRESSION DU QUIZ ===============================
+
+// imports
+
 import quiz from "./quiz-femmes-scientifiques.json";
+
+// =============================== BARRE DE PROGRESSION ===============================
 
 const totalQuestions = quiz.questions.length;
 export let currentQuestion = 0;
@@ -18,6 +24,8 @@ export function updateProgressBar() {
   const pourcentage = (currentQuestion / totalQuestions) * 100;
   barre.style.width = `${pourcentage}%`;
 }
+
+// ======================================= RESET ======================================
 
 /**
  * - réinitialise la barre de progression
