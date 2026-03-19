@@ -23,12 +23,12 @@ export function showQuestion() {
   questionElement.innerText = question.question; // afficher la question
 
   // remplir les boutons avec les réponses
-  for (let index = 0; index < question.options.length; index++) {
-    answerButtons[index].innerText = question.options[index];
+  for (let i = 0; i < question.options.length; i++) {
+    answerButtons[i].innerText = question.options[i];
   }
 }
 
-export function nextQuestion() {
+export function moveToNextQuestion() {
   if (currentQuestionIndex < quiz.questions.length - 1) {
     currentQuestionIndex++;
     showQuestion();
