@@ -46,6 +46,10 @@ export function loseLife() {
 
 // ============================= RESET =================================
 
+/**
+ * - réinitialise nombre de vies
+ */
+
 export function resetLife() {
   lives = 5;
   displayLife();

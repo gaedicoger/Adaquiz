@@ -19,6 +19,10 @@ export function updateProgressBar() {
   barre.style.width = `${pourcentage}%`;
 }
 
+/**
+ * - réinitialise la barre de progression
+ */
+
 export function resetProgressBar() {
   currentQuestion = 0;
   const barre = document.getElementById("display-progress");

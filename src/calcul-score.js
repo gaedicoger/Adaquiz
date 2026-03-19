@@ -25,6 +25,10 @@ export function calculScore(indexUserAnswer, correctIndex) {
 
 // =============================== RESET =====================================
 
+/**
+ * - réinitialise le score
+ */
+
 export function resetScore() {
   score = 0;
 }

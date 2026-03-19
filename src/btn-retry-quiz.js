@@ -1,51 +1,46 @@
-// JS Page fin : Ecouter le bouton pour réinitialiser
+// ============================= BOUTON RECOMMENCER =================================
 
-// import { endScreen } from "./display-end-screen";
-// import { startScreen } from "./start";
-import {
-  showQuestion,
-  // answerMessage,
-  resetCurrentIndex,
-} from "./quiz-display.js";
+// imports
+
+import { showQuestion, resetCurrentIndex } from "./quiz-display.js";
 import { initNextButton, answerButtons } from "./btn-next-question.js";
 import { resetScore } from "./calcul-score.js";
 import { resetProgressBar } from "./progression.js";
 import { resetLife } from "./systeme-de-vie.js";
-// récupérer les éléments
+
+// DOM
 
 const btnRetry = document.getElementById("retryQuiz");
 
-// déclaration fonction
+// =================================== RESET ======================================
 
-// export function retryQuiz() {
-//   // Quand l’utilisateur clique sur "Recommencer":
-//   score = 0; // réinitialiser le score,
-//   currentQuestionIndex = 0;
-//   // vider le localStorage (bonus) pourquoi faire alors qu'on veut concerver justement un historique des score grâce au local storage
-// }
+/**
+ * - masque écran de fin
+ * - vide message "bonne ou mauvaise" réponse
+ * - affiche écran quiz
+ * - réactive boutons réponses
+ * - reset vie, score, index question, barre progression
+ * - initialise bouton question suivante
+ */
 
-//Fonction Retry :
 export function retryQuiz() {
   const endScreen = document.querySelector(".endScreen");
   endScreen.classList.add("hidden"); //masquer l’écran de fin
   const answerMessage = document.getElementById("answerMessage");
   answerMessage.innerHTML = ``;
-  console.log(answerMessage);
-
   const displayQuizScreen = document.getElementById("questions-container");
   displayQuizScreen.classList.remove("hidden");
-  answerButtons.forEach((button) => (button.disabled = false)); //Réactiver les boutons questions
+  answerButtons.forEach((button) => (button.disabled = false));
   resetLife();
   resetScore();
   resetCurrentIndex();
   resetProgressBar();
-
   initNextButton();
-
   showQuestion();
 }
 
-// - écouter le bouton et déclencher la fonction
+// event
+
 btnRetry.addEventListener("click", () => {
   retryQuiz();
 });

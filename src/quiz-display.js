@@ -67,6 +67,9 @@ export function displayAnswerMessage(indexUserAnswer, correctIndex) {
 
 // ============================== RESET ==============================
 
+/**
+ * - réinitialise index question
+ */
 export function resetCurrentIndex() {
   currentQuestionIndex = 0;
 }
