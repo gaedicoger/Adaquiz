@@ -15,7 +15,7 @@ const startButton = document.getElementById("start-button"); //Récupérer le bo
 // écoute bouton démarrer
 
 startButton.addEventListener("click", () => {
-  const welcome = document.querySelector(".welcome"); //récupérer la div welcome
+  const welcome = document.querySelector(".start-screen");
   welcome.classList.add("hidden");
   displayQuizScreen.classList.remove("hidden");
   document.querySelector(".title-quiz-screen").innerText = quiz.title;

@@ -13,7 +13,7 @@ import quiz from "./quiz-femmes-scientifiques.json";
 
 // DOM
 
-const titleQuiz = document.querySelector(".welcome > h1");
+const titleQuiz = document.querySelector(".title-start-screen");
 const displayQuizScreen = document.querySelector(".quiz-screen");
 const displayEndScreen = document.querySelector(".end-screen");
 
