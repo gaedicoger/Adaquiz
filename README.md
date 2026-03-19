@@ -46,5 +46,5 @@ src/
 
 ## 👥 Équipe
 
-Projet réalisé dans le cadre de la formation Ada Tech School promotion Gisèle Halimi Nantes
+Projet réalisé dans le cadre de la formation Ada Tech School promotion Gisèle Halimi Nantes  
 Apprenant(e)s : Gaédic, Mathis, Elodie.
