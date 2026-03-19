@@ -2,7 +2,6 @@
 
 // imports
 
-import quiz from "./quiz-femmes-scientifiques.json";
 import { displayAnswerMessage } from "./quiz-display.js";
 
 // =============================== CALCUL =====================================
