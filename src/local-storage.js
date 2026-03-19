@@ -1,4 +1,4 @@
-const STORAGE_KEY = "bestScore"; //Pas de tout de masjuscules pour déclarer une variable
+const STORAGE_KEY = "bestScore";
 
 export function saveBestScore(score) {
   const bestScore = Number(localStorage.getItem(STORAGE_KEY));
