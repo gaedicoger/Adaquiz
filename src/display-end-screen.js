@@ -54,7 +54,7 @@ function displayScore(finalScore) {
 // Messages selon pourcentage de réussite
 
 function displayScoreMessage(pourcentScore) {
-  const scoreMessagePlace = document.getElementById("scoreMessage");
+  const scoreMessagePlace = document.getElementById("score-message");
   scoreMessagePlace.innerHTML = "";
   let scoreMessage = document.createElement("p");
 
