@@ -33,7 +33,8 @@ export function showQuestion() {
 }
 
 /**
- * Passer à la question suivante
+ * - passe à la question suivante
+ * - affiche la question suivante
  */
 
 export function moveToNextQuestion() {
