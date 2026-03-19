@@ -76,6 +76,6 @@ function displayScoreMessage(pourcentScore) {
 // Nombre de questions réussies
 
 function displayTotalScore(finalScore, numberQuestions) {
-  const displayTotalScore = document.getElementById("totalScore");
+  const displayTotalScore = document.getElementById("total-score");
   displayTotalScore.innerText = ` Tu as trouvé la bonne réponse pour ${finalScore} questions sur ${numberQuestions}`;
 }
