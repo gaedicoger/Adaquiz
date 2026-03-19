@@ -26,7 +26,6 @@ function displayLife() {
 export function lostLife() {
   lives--;
   displayLife();
-
   if (lives <= 0) {
     alert("Tu as perdu ! Le quiz recommence.");
     retryQuiz();
