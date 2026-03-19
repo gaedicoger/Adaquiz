@@ -61,7 +61,7 @@ export function displayAnswerMessage(indexUserAnswer, correctIndex) {
   answerMessage.appendChild(messageText);
 
   if (indexUserAnswer !== correctIndex) {
-    lostLife();
+    loseLife();
   }
 }
 
