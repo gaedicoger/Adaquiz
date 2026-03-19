@@ -25,10 +25,7 @@ export function calculScore(indexUserAnswer, correctIndex) {
 }
 
 // =============================== RESET =====================================
-let indexInitQuiz = 0;
 
 export function resetScore() {
   score = 0;
-  let initQuiz = quiz.questions[indexInitQuiz];
-  // currentQuestionIndex = 0;
 }
