@@ -1,7 +1,7 @@
 // JS Page fin : Ecouter le bouton pour réinitialiser
 
 // import { endScreen } from "./display-end-screen";
-// import { showStartScreen } from "./start";
+// import { startScreen } from "./start";
 import {
   showQuestion,
   // answerMessage,

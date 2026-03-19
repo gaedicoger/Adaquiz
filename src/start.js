@@ -19,17 +19,17 @@ startButton.addEventListener("click", () => {
   welcome.classList.add("hidden");
   displayQuizScreen.classList.remove("hidden");
   document.querySelector(".questions > header > h1").innerText = quiz.title;
-  showStartScreen();
+  showQuizScreen();
 });
 
 /**
- * showStartScreen() permet :
+ * showQuizScreen() permet :
  * - d'afficher l'écran de quiz
  * - d'initialiser le bouton question suivante
  * - d'initialiser le nombre de vies
  */
 
-export function showStartScreen() {
+export function showQuizScreen() {
   showQuestion();
   initBtnNext();
   initLives();
