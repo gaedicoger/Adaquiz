@@ -1,46 +1,52 @@
-// ================================== AFFICHAGE DU QUIZZ ==================================
+// ============================= ECRAN QUIZ =================================
+
+// imports
 
 import quiz from "./quiz-femmes-scientifiques.json";
-import { lostLife } from "./systeme-de-vie";
-// import { currentQuestionIndex } from "./calcul-score";
+import { loseLife } from "./systeme-de-vie";
 
-// récupérer les éléments HTML
-const questionElement = document.getElementById("currentQuestion");
-const answerButtons = document.querySelectorAll(".buttonA");
-
-export const answerMessage = document.getElementById("answerMessage");
+// DOM
+const questionElement = document.getElementById("current-question");
+const answerButtons = document.querySelectorAll(".answer-button");
+export const answerMessage = document.getElementById("answer-message");
 export const messageText = document.createElement("p");
 
-// variable pour savoir quelle question est affichée
-export let currentQuestionIndex = 0; //todo : éviter code en dur!
+// ============================= DISPLAY =============================
 
-// ==================== FONCTION POUR LANCER LE QUIZ ====================
-// fonctionnalité développée dans start.js function startScreen ()
+// affichage écran quiz géré par fonction showQuizScreen() dans start.js
 
-// ==================== FONCTION POUR AFFICHER UNE QUESTION ====================
+export let currentQuestionIndex = 0;
+
+/**
+ * - affiche la question
+ */
+
 export function showQuestion() {
   const question = quiz.questions[currentQuestionIndex];
   questionElement.innerText = question.question; // afficher la question
 
   // remplir les boutons avec les réponses
-  for (let index = 0; index < question.options.length; index++) {
-    answerButtons[index].innerText = question.options[index];
+  for (let i = 0; i < question.options.length; i++) {
+    answerButtons[i].innerText = question.options[i];
   }
 }
 
-// ==================== FONCTION POUR PASSER À LA QUESTION SUIVANTE ====================
-export function nextQuestion() {
+/**
+ * - passe à la question suivante
+ * - affiche la question suivante
+ */
+
+export function moveToNextQuestion() {
   if (currentQuestionIndex < quiz.questions.length - 1) {
     currentQuestionIndex++;
     showQuestion();
   }
 }
 
-//Fonction affichage des bonnes et des mauvaises réponses :
 /**
- *
- * @param {*} indexUserAnswer
- * @param {*} correctIndex
+ * Affiche "bonne" ou "mauvaise" réponse
+ * @param {number} indexUserAnswer bouton réponse sélectionné
+ * @param {number} correctIndex réponse correcte
  */
 
 export function displayAnswerMessage(indexUserAnswer, correctIndex) {
@@ -55,10 +61,15 @@ export function displayAnswerMessage(indexUserAnswer, correctIndex) {
   answerMessage.appendChild(messageText);
 
   if (indexUserAnswer !== correctIndex) {
-    lostLife();
+    loseLife();
   }
 }
 
+// ============================== RESET ==============================
+
+/**
+ * - réinitialise index question
+ */
 export function resetCurrentIndex() {
   currentQuestionIndex = 0;
 }

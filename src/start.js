@@ -1,42 +1,35 @@
-// ============================= IMPORTS ======================================
+// ========================= ECRAN D'ACCUEIL ==========================
+
+// imports
+
 import quiz from "./quiz-femmes-scientifiques.json";
 import { showQuestion } from "./quiz-display.js";
-import { initBtnNext } from "./btn-next-question.js";
+import { initNextButton } from "./btn-next-question.js";
 import { initLives } from "./systeme-de-vie.js";
 
-// ===========================================================================
-// ==============================  START ==========================================
-// ===========================================================================
+// DOM
 
-const displayQuizScreen = document.querySelector("#questions-container");
+const displayQuizScreen = document.querySelector(".quiz-screen");
+const startButton = document.getElementById("start-button"); //Récupérer le bouton start
 
-//Fonction de démarrage du quizz :
-// export function startScreen() {
-//   const startButton = document.getElementById("startButton"); //Récupérer le bouton start
-//   const welcome = document.querySelector(".welcome"); //récupérer la div welcome
-//   startButton.addEventListener("click", () => {
-//     //Ajouter un event et pas un click pour caché le bouton démarrer et ensuite appeler la fonction startquiz
-//     welcome.classList.add("hidden");
-//     displayQuizScreen.classList.remove("hidden");
-//     document.querySelector(".questions > header > h1").innerText = quiz.title;
-//     showQuestion();
-//     initBtnNext();
-//   });
-// }
+// écoute bouton démarrer
 
-// startScreen();
-
-const startButton = document.getElementById("startButton"); //Récupérer le bouton start
 startButton.addEventListener("click", () => {
-  const welcome = document.querySelector(".welcome"); //récupérer la div welcome
+  const welcome = document.querySelector(".start-screen");
   welcome.classList.add("hidden");
   displayQuizScreen.classList.remove("hidden");
-  document.querySelector(".questions > header > h1").innerText = quiz.title;
-  startScreen();
+  document.querySelector(".title-quiz-screen").innerText = quiz.title;
+  showQuizScreen();
 });
 
-export function startScreen() {
+/**
+ * - affiche l'écran de quiz
+ * - initialise le bouton question suivante
+ * - initialise nombre de vies
+ */
+
+export function showQuizScreen() {
   showQuestion();
-  initBtnNext();
+  initNextButton();
   initLives();
 }

@@ -1,4 +1,11 @@
-const STORAGE_KEY = "bestScore"; //Pas de tout de masjuscules pour déclarer une variable
+// ====================== SAUVEGARDE MEILLEUR SCORE ========================
+
+const STORAGE_KEY = "bestScore";
+
+/**
+ * - sauvegarde le meilleur score
+ * @param {number} score
+ */
 
 export function saveBestScore(score) {
   const bestScore = Number(localStorage.getItem(STORAGE_KEY));
@@ -8,9 +15,15 @@ export function saveBestScore(score) {
   }
 }
 
+// ============================== DISPLAY ==================================
+
+/**
+ * - affiche le meilleur score
+ */
+
 export function displayBestScore() {
   const bestScore = localStorage.getItem(STORAGE_KEY);
-  const bestScoreElement = document.querySelector("#bestScore");
+  const bestScoreElement = document.querySelector("#best-score");
 
   if (bestScoreElement) {
     if (bestScore) {

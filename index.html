@@ -4,42 +4,42 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="src/icons8-quiz-64.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>adaquiz</title>
+    <title>Adaquiz</title>
   </head>
   <body>
     <div id="app">
-      <div class="welcome">
-        <h1>Title</h1>
-        <button class="button" id="startButton">Démarrer</button>
+      <div class="start-screen">
+        <h1 class="title-start-screen">Title</h1>
+        <button class="button" id="start-button">Démarrer</button>
       </div>
-      <div class="questions" id="questions-container">
+      <div class="quiz-screen">
         <header>
-          <h1>Title</h1>
+          <h1 class="title-quiz-screen">Title</h1>
         </header>
-
         <p id="lives">Vies : 3</p>
-
         <div class="progress-container">
           <div id="display-progress"></div>
         </div>
-        <div id="currentQuestion"></div>
-        <div id="answerButtons">
-          <button class="buttonA" id="button1" data-index="0">Réponse 1</button>
-          <button class="buttonA" id="button2" data-index="1">Réponse 2</button>
-          <button class="buttonA" id="button3" data-index="2">Réponse 3</button>
-          <button class="buttonA" id="button4" data-index="3">Réponse 4</button>
+        <div id="current-question" class="no-wrap"></div>
+        <div id="answer-buttons">
+          <button class="answer-button" data-index="0">Réponse 1</button>
+          <button class="answer-button" data-index="1">Réponse 2</button>
+          <button class="answer-button" data-index="2">Réponse 3</button>
+          <button class="answer-button" data-index="3">Réponse 4</button>
         </div>
-        <div id="answerMessage"></div>
-        <button class="button" id="next-question">Question suivante</button>
+        <div id="answer-message"></div>
+        <button class="button" id="next-question-button">
+          Question suivante
+        </button>
       </div>
-      <div class="endScreen">
-        <h2 id="scoreMessage"></h2>
-        <h3 id="resultScore"></h3>
-        <div id="totalScore"></div>
+      <div class="end-screen">
+        <h2 id="score-message"></h2>
+        <h3 id="result-score"></h3>
+        <div id="total-score"></div>
 
-        <p id="bestScore"></p>
+        <p id="best-score"></p>
 
-        <button class="button" id="retryQuiz">Recommencer</button>
+        <button class="button" id="retry-button">Recommencer</button>
       </div>
     </div>
     <script type="module" src="/src/main.js"></script>

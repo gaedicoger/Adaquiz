@@ -1,50 +1,60 @@
-// ============================= IMPORTS ======================================
+// ============================= ECRAN DE FIN =================================
+
+// imports
+
 import quiz from "./quiz-femmes-scientifiques.json";
 import { score } from "./calcul-score.js";
 import { saveBestScore, displayBestScore } from "./local-storage.js";
 
-// ============================= VARIABLES ====================================
-//Stocker le nombre de questions en tout:
+// ==============================  FINISH ====================================
+
+/**
+ * - affiche écran de fin
+ *    - affiche pourcentage réussite
+ *    - affiche message réussite
+ *    - affiche score final
+ *    - affiche nombre de questions réussies
+ *    - affiche meilleur score
+ */
+
+export function showEndScreen() {
+  const finalScore = score;
+  const endScreen = document.querySelector(".end-screen");
+  endScreen.classList.remove("hidden");
+  calculPourcentScore(finalScore, numberQuestions);
+  displayScore(finalScore);
+  displayScoreMessage(pourcentScore);
+  displayTotalScore(finalScore, numberQuestions);
+  saveBestScore(finalScore);
+  displayBestScore();
+}
+
+// ==============================  CALCUL =====================================
+
+// Variables
+
 const numberQuestions = quiz.questions.length;
-//Stocker le pourcentage:
 let pourcentScore = 0;
 
-// ===========================================================================
-// ==============================  CALCUL =====================================
-// ===========================================================================
+// Fonction qui transforme le score en pourcentage
 
-//Fonction transformer le score en pourcentage. selon le nombre de questions
-/**
- *
- * @param {*} finalScore
- * @param {*} numberQuestions
- */
 function calculPourcentScore(finalScore, numberQuestions) {
   pourcentScore = (finalScore / numberQuestions) * 100;
 }
 
-// ===========================================================================
 // ==============================  DISPLAY ====================================
-// ===========================================================================
 
-//Fonction pour afficher le score :
-/**
- *
- * @param {*} finalScore
- */
+// Score final
+
 function displayScore(finalScore) {
-  let resultScore = document.getElementById("resultScore");
+  let resultScore = document.getElementById("result-score");
   resultScore.innerText = `Ton score est de ${finalScore} points`;
 }
 
-//Fonction Afficher les message en fonction du score en pourcentage:
-/**
- *
- * @param {*} pourcentScore
- */
+// Messages selon pourcentage de réussite
 
 function displayScoreMessage(pourcentScore) {
-  const scoreMessagePlace = document.getElementById("scoreMessage");
+  const scoreMessagePlace = document.getElementById("score-message");
   scoreMessagePlace.innerHTML = "";
   let scoreMessage = document.createElement("p");
 
@@ -63,32 +73,9 @@ function displayScoreMessage(pourcentScore) {
   scoreMessagePlace.appendChild(scoreMessage);
 }
 
-//Fonction pour afficher le nombre de questions réussies:
-/**
- *
- * @param {*} finalScore
- * @param {*} numberQuestions
- */
+// Nombre de questions réussies
 
 function displayTotalScore(finalScore, numberQuestions) {
-  const displayTotalScore = document.getElementById("totalScore");
+  const displayTotalScore = document.getElementById("total-score");
   displayTotalScore.innerText = ` Tu as trouvé la bonne réponse pour ${finalScore} questions sur ${numberQuestions}`;
-}
-
-// ===========================================================================
-// ==============================  FINISH =====================================
-// ===========================================================================
-
-export function endScreen() {
-  const finalScore = score;
-  const endScreen = document.querySelector(".endScreen");
-
-  endScreen.classList.remove("hidden");
-  calculPourcentScore(finalScore, numberQuestions);
-  displayScore(finalScore);
-  displayScoreMessage(pourcentScore);
-  displayTotalScore(finalScore, numberQuestions);
-
-  saveBestScore(finalScore);
-  displayBestScore();
 }
