@@ -1,5 +1,6 @@
 import { initRetryButton } from "./btn-retry-quiz";
-let lives = 3;
+
+export let lives = 3;
 
 function displayLife() {
   const lifeElement = document.querySelector("#lives");
@@ -12,7 +13,6 @@ export function resetLife() {
 
 export function lostLife() {
   lives--;
-
   if (lives <= 0) {
     alert("Tu as perdu ! Le quiz recommence.");
     resetLife();

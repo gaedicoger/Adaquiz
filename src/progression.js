@@ -6,7 +6,7 @@ let currentQuestion = 0; //! idem ici
 
 export function updateProgressBar() {
   const barre = document.getElementById("display-progress");
-  const pourcentage = (currentQuestion / totalQuestions) * 100;
+  const pourcentage = (currentQuestion / totalQuestions) * 100 + 1;
   barre.style.width = `${pourcentage}%`;
   if (currentQuestion <= totalQuestions) {
     currentQuestion++;
