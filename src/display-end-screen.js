@@ -45,6 +45,7 @@ function displayScore(finalScore) {
 
 function displayScoreMessage(pourcentScore) {
   const scoreMessagePlace = document.getElementById("scoreMessage");
+  scoreMessagePlace.innerHTML = "";
   let scoreMessage = document.createElement("p");
 
   if (pourcentScore === 100) {

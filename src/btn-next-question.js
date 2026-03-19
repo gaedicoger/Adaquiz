@@ -24,47 +24,41 @@ resultButton.innerText = "Résultat";
 resultButton.classList.add("button", "hidden");
 questionContainer.appendChild(resultButton);
 
-//let isIntialized = false;
-
 // ================= INITIALISATION =================
 export function initBtnNext() {
-  //if (isInitialized) return; // 👈 ne pas réinitialiser si déjà fait
-  //isInitialized = true;
-  nextButton.classList.add("hidden"); // cacher le bouton next au départ
-  resultButton.classList.add("hidden");
-  // ================= clic sur une réponse =================
-  for (let index = 0; index < answerButtons.length; index++) {
-    answerButtons[index].addEventListener("click", function () {
-      answerButtons.forEach((button) => (button.disabled = true)); //Désactivé les boutons après une première réponse choisie
-      // dernière question ?
-      if (currentQuestionIndex === quiz.questions.length - 1) {
-        resultButton.classList.remove("hidden"); // afficher le bouton Résultat
-      } else {
-        nextButton.classList.remove("hidden"); // afficher le bouton Next
-      }
-      const indexUserAnswer = Number(answerButtons[index].dataset.index);
-      const correctIndex = quiz.questions[currentQuestionIndex].correctIndex;
+  nextButton.classList.add("hidden");
+  resultButton.classList.add("hidden"); // ← le fix du bug retry
+  answerButtons.forEach((button) => (button.disabled = false));
+}
 
-      calculScore(indexUserAnswer, correctIndex); //Appel de la fonction d'itération du score
-      //displayAnswerMessage(indexUserAnswer, correctIndex); //Appel de la fonction d'affichage des bonnes ou mauvaises réponses
-    });
-  }
-
-  // ================= clic sur bouton Next =================
-  nextButton.addEventListener("click", function () {
-    nextQuestion(); // passer à la question suivante
-    nextButton.classList.add("hidden"); // cacher le bouton next
-    resultButton.classList.add("hidden"); // cacher le bouton Résultat (au cas où)
-    answerMessage.innerHTML = ``;
-    answerButtons.forEach((button) => (button.disabled = false)); //Réactivé les boutons pour la question suivante
-    updateProgressBar();
-  });
-
-  // ================= clic sur bouton Résultat =================
-  resultButton.addEventListener("click", function () {
-    // appeler la fonction de score / écran final
-    //cacher l'écran de questions
-    questionContainer.classList.add("hidden");
-    endScreen();
+// ================= clic sur une réponse =================
+// (en dehors de initBtnNext, branché une seule fois au chargement)
+for (let index = 0; index < answerButtons.length; index++) {
+  answerButtons[index].addEventListener("click", function () {
+    answerButtons.forEach((button) => (button.disabled = true));
+    if (currentQuestionIndex === quiz.questions.length - 1) {
+      resultButton.classList.remove("hidden");
+    } else {
+      nextButton.classList.remove("hidden");
+    }
+    const indexUserAnswer = Number(answerButtons[index].dataset.index);
+    const correctIndex = quiz.questions[currentQuestionIndex].correctIndex;
+    calculScore(indexUserAnswer, correctIndex);
   });
 }
+
+// ================= clic sur bouton Next =================
+nextButton.addEventListener("click", function () {
+  nextQuestion();
+  nextButton.classList.add("hidden");
+  resultButton.classList.add("hidden");
+  answerMessage.innerHTML = ``;
+  answerButtons.forEach((button) => (button.disabled = false));
+  updateProgressBar();
+});
+
+// ================= clic sur bouton Résultat =================
+resultButton.addEventListener("click", function () {
+  questionContainer.classList.add("hidden");
+  endScreen();
+});

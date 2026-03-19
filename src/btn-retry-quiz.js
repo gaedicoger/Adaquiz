@@ -9,7 +9,7 @@ import {
 } from "./quiz-display.js";
 import { initBtnNext, answerButtons } from "./btn-next-question.js";
 import { resetScore } from "./calcul-score.js";
-//import { resetProgressBar } from "./progression.js";
+import { resetProgressBar } from "./progression.js";
 // récupérer les éléments
 
 const btnRetry = document.getElementById("retryQuiz");
@@ -35,7 +35,7 @@ export function retryQuiz() {
   answerButtons.forEach((button) => (button.disabled = false)); //Réactivé les boutons pour la question suivante
   answerMessage.innerHTML = ``;
   showQuestion();
-  //resetProgressBar();
+  resetProgressBar();
 }
 
 // - écouter le bouton et déclencher la fonction
