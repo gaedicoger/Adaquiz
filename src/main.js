@@ -19,7 +19,7 @@ const displayEndScreen = document.querySelector(".endScreen");
 
 // ========================= AFFICHAGE PAR DEFAUT ==========================
 
-//* affiche titre quizz sur écran d'accueil
+//* affiche titre quiz sur écran d'accueil
 titleQuiz.innerText = quiz.title;
 
 //* masque écrans quiz et fin

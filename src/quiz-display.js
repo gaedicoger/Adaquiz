@@ -1,23 +1,23 @@
-// ================================== AFFICHAGE DU QUIZZ ==================================
+// ================================== ECRAN QUIZ ==================================
+
+// imports
 
 import quiz from "./quiz-femmes-scientifiques.json";
 import { lostLife } from "./systeme-de-vie";
-// import { currentQuestionIndex } from "./calcul-score";
 
-// récupérer les éléments HTML
+// DOM
 const questionElement = document.getElementById("currentQuestion");
 const answerButtons = document.querySelectorAll(".buttonA");
 
+// variable
 export const answerMessage = document.getElementById("answerMessage");
 export const messageText = document.createElement("p");
+export let currentQuestionIndex = 0;
 
-// variable pour savoir quelle question est affichée
-export let currentQuestionIndex = 0; //todo : éviter code en dur!
+// ==================== INITIALISATION QUIZ ====================
 
-// ==================== FONCTION POUR LANCER LE QUIZ ====================
-// fonctionnalité développée dans start.js function showQuizScreen ()
+// affichage écran quiz géré par fonction showQuizScreen() dans start.js
 
-// ==================== FONCTION POUR AFFICHER UNE QUESTION ====================
 export function showQuestion() {
   const question = quiz.questions[currentQuestionIndex];
   questionElement.innerText = question.question; // afficher la question
@@ -28,7 +28,6 @@ export function showQuestion() {
   }
 }
 
-// ==================== FONCTION POUR PASSER À LA QUESTION SUIVANTE ====================
 export function nextQuestion() {
   if (currentQuestionIndex < quiz.questions.length - 1) {
     currentQuestionIndex++;
@@ -36,11 +35,10 @@ export function nextQuestion() {
   }
 }
 
-//Fonction affichage des bonnes et des mauvaises réponses :
 /**
- *
- * @param {*} indexUserAnswer
- * @param {*} correctIndex
+ * Affiche "bonne" ou "mauvaise" réponse
+ * @param {number} indexUserAnswer bouton réponse sélectionné
+ * @param {number} correctIndex réponse correcte
  */
 
 export function displayAnswerMessage(indexUserAnswer, correctIndex) {
