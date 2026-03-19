@@ -10,7 +10,7 @@ import { resetLife } from "./systeme-de-vie.js";
 
 // DOM
 
-const btnRetry = document.getElementById("retryQuiz");
+const btnRetry = document.getElementById("retry-button");
 
 // =================================== RESET ======================================
 
@@ -28,7 +28,7 @@ export function retryQuiz() {
   endScreen.classList.add("hidden"); //masquer l’écran de fin
   const answerMessage = document.getElementById("answer-message");
   answerMessage.innerHTML = ``;
-  const displayQuizScreen = document.querySelector("quiz-screen");
+  const displayQuizScreen = document.querySelector(".quiz-screen");
   displayQuizScreen.classList.remove("hidden");
   answerButtons.forEach((button) => (button.disabled = false));
   resetLife();
