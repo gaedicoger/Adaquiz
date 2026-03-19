@@ -1,21 +1,30 @@
-import { initRetryButton } from "./btn-retry-quiz";
+import { restartQuiz } from "./main";
 
-export let lives = 3;
+let lives = 3;
 
 function displayLife() {
   const lifeElement = document.querySelector("#lives");
-  lifeElement.textContent = "Vies : " + lives;
+  if (lifeElement) {
+    lifeElement.textContent = "Vies : " + lives;
+  }
+}
+
+export function initLives() {
+  lives = 3;
+  displayLife();
 }
 
 export function resetLife() {
   lives = 3;
+  displayLife();
 }
 
 export function lostLife() {
   lives--;
+  displayLife();
+
   if (lives <= 0) {
     alert("Tu as perdu ! Le quiz recommence.");
-    resetLife();
-    initRetryButton();
+    restartQuiz();
   }
 }
