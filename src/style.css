@@ -45,7 +45,7 @@ h1 {
   text-align: center;
 }
 
-.questions {
+.quiz-screen {
   display: flex;
   flex-direction: column;
   gap: 1rem;
