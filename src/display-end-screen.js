@@ -79,7 +79,7 @@ function displayTotalScore(finalScore, numberQuestions) {
 // ==============================  FINISH =====================================
 // ===========================================================================
 
-export function endScreen() {
+export function showEndScreen() {
   const finalScore = score;
   const endScreen = document.querySelector(".endScreen");
 

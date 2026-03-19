@@ -70,5 +70,5 @@ nextButton.addEventListener("click", function () {
 
 resultButton.addEventListener("click", function () {
   questionContainer.classList.add("hidden");
-  endScreen();
+  showEndScreen();
 });
