@@ -1,4 +1,11 @@
+// ====================== SAUVEGARDE MEILLEUR SCORE ========================
+
 const STORAGE_KEY = "bestScore";
+
+/**
+ * - sauvegarde le meilleur score
+ * @param {number} score
+ */
 
 export function saveBestScore(score) {
   const bestScore = Number(localStorage.getItem(STORAGE_KEY));
@@ -7,6 +14,12 @@ export function saveBestScore(score) {
     localStorage.setItem(STORAGE_KEY, score);
   }
 }
+
+// ============================== DISPLAY ==================================
+
+/**
+ * - affiche le meilleur score
+ */
 
 export function displayBestScore() {
   const bestScore = localStorage.getItem(STORAGE_KEY);
