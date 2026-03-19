@@ -23,7 +23,7 @@ startButton.addEventListener("click", () => {
 });
 
 /**
- * cette fonction permet :
+ * showStartScreen() permet :
  * - d'afficher l'écran de quiz
  * - d'initialiser le bouton question suivante
  * - d'initialiser le nombre de vies
