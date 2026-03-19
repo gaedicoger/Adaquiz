@@ -9,7 +9,7 @@ import {
   currentQuestionIndex,
 } from "./quiz-display.js";
 import { calculScore } from "./calcul-score.js";
-import { endScreen } from "./display-end-screen.js";
+import { showEndScreen } from "./display-end-screen.js";
 import { updateProgressBar } from "./progression.js";
 
 // DOM
