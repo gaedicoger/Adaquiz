@@ -10,13 +10,15 @@
     <div id="app">
       <div class="start-screen">
         <h1 class="title-start-screen">Title</h1>
-        <button class="button" id="start-button">Démarrer</button>
+        <button id="start-button">Démarrer</button>
       </div>
       <div class="quiz-screen">
         <header>
           <h1 class="title-quiz-screen">Title</h1>
         </header>
+
         <p id="lives">Vies : 3</p>
+
         <div class="progress-container">
           <div id="display-progress"></div>
         </div>
@@ -28,9 +30,7 @@
           <button class="answer-button" data-index="3">Réponse 4</button>
         </div>
         <div id="answer-message"></div>
-        <button class="button" id="next-question-button">
-          Question suivante
-        </button>
+        <button id="next-question-button">Question suivante</button>
       </div>
       <div class="end-screen">
         <h2 id="score-message"></h2>
@@ -39,7 +39,7 @@
 
         <p id="best-score"></p>
 
-        <button class="button" id="retry-button">Recommencer</button>
+        <button id="retry-button">Recommencer</button>
       </div>
     </div>
     <script type="module" src="/src/main.js"></script>
