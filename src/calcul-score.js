@@ -32,3 +32,11 @@ export function calculScore(indexUserAnswer, correctIndex) {
 export function resetScore() {
   score = 0;
 }
+
+// let indexInitQuiz = 0;
+
+// export function resetScore() {
+//   score = 0;
+//   let initQuiz = quiz.questions[indexInitQuiz];
+//   // currentQuestionIndex = 0;
+// }
