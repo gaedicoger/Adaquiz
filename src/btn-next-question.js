@@ -32,7 +32,7 @@ questionContainer.appendChild(resultButton);
 
 export function initNextButton() {
   nextButton.classList.add("hidden");
-  resultButton.classList.add("hidden"); // ← le fix du bug retry
+  resultButton.classList.add("hidden");
   answerButtons.forEach((button) => (button.disabled = false));
 }
 
