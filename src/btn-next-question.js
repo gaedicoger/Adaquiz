@@ -1,4 +1,4 @@
-// ============================ BOUTON QUESTION SUIVANTE ============================
+// ============================ NEXT QUESTION BUTTON =======================
 
 // imports
 
@@ -23,7 +23,7 @@ resultButton.innerText = "Résultat";
 resultButton.classList.add("button", "hidden");
 questionContainer.appendChild(resultButton);
 
-// ==================== INITIALISATION ====================
+// =========================== INITIALISATION ==============================
 
 /**
  * - masque boutons question suivante et résultat
@@ -36,7 +36,7 @@ export function initNextButton() {
   answerButtons.forEach((button) => (button.disabled = false));
 }
 
-// ==================== EVENT CLICK ====================
+// ============================ EVENT CLICK ================================
 
 // bouton réponse
 //! (en dehors de initNextButton, branché une seule fois au chargement)

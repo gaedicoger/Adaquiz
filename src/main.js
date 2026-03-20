@@ -1,4 +1,4 @@
-// ========================= INITIALISATION APP ==========================
+// ============================ APP INITIALISATION ============================
 
 // import
 
@@ -17,7 +17,7 @@ const titleQuiz = document.querySelector(".title-start-screen");
 const displayQuizScreen = document.querySelector(".quiz-screen");
 const displayEndScreen = document.querySelector(".end-screen");
 
-// ========================= AFFICHAGE PAR DEFAUT ==========================
+// ============================== DEFAULT DISPLAY =============================
 
 //* affiche titre quiz sur écran d'accueil
 titleQuiz.innerText = quiz.title;

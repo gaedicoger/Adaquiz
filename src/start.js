@@ -1,4 +1,4 @@
-// ========================= ECRAN D'ACCUEIL ==========================
+// ================================ START SCREEN ================================
 
 // imports
 
@@ -10,7 +10,7 @@ import { initLives } from "./life-counter.js";
 // DOM
 
 const displayQuizScreen = document.querySelector(".quiz-screen");
-const startButton = document.getElementById("start-button"); //Récupérer le bouton start
+const startButton = document.getElementById("start-button");
 
 // écoute bouton démarrer
 

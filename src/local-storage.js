@@ -1,4 +1,4 @@
-// ====================== SAUVEGARDE MEILLEUR SCORE ========================
+// =========================== LOCAL STORAGE ===============================
 
 const STORAGE_KEY = "bestScore";
 
