@@ -16,7 +16,6 @@ export let score = 0;
  */
 
 export function calculScore(indexUserAnswer, correctIndex) {
-  //quand je clique sur une réponse sur un bouton je stocke l'index de la réponse trouver comment le stocker sur la page bouton ?
   if (indexUserAnswer === correctIndex) {
     score += 1;
   }
@@ -32,11 +31,3 @@ export function calculScore(indexUserAnswer, correctIndex) {
 export function resetScore() {
   score = 0;
 }
-
-// let indexInitQuiz = 0;
-
-// export function resetScore() {
-//   score = 0;
-//   let initQuiz = quiz.questions[indexInitQuiz];
-//   // currentQuestionIndex = 0;
-// }
