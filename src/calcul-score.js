@@ -11,8 +11,8 @@ export let score = 0;
 /**
  * - calcul le score
  * - affiche "bonne ou mauvaise" réponse
- * @param {*} indexUserAnswer
- * @param {*} correctIndex
+ * @param {number} indexUserAnswer
+ * @param {number} correctIndex
  */
 
 export function calculScore(indexUserAnswer, correctIndex) {

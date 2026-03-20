@@ -49,7 +49,7 @@ for (let i = 0; i < answerButtons.length; i++) {
     } else {
       nextButton.classList.remove("hidden");
     }
-    const indexUserAnswer = Number(answerButtons[i].dataset.index); // récupère le data-index du bouton cliqué
+    const indexUserAnswer = Number(answerButtons[i].dataset.index); // dataset récupère le data-index du bouton cliqué
     const correctIndex = quiz.questions[currentQuestionIndex].correctIndex;
     calculScore(indexUserAnswer, correctIndex);
   });
