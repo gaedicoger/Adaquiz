@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/nom-du-repo/assets/icons8-quiz-64-CcMgeXmp.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adaquiz</title>
+    <script type="module" crossorigin src="/nom-du-repo/assets/index-Cg1Y9aaS.js"></script>
+    <link rel="stylesheet" crossorigin href="/nom-du-repo/assets/index-DyNvK-Hw.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="start-screen">
+        <h1 class="title-start-screen">Title</h1>
+        <button id="start-button">Démarrer</button>
+      </div>
+      <div class="quiz-screen">
+        <header>
+          <h1 class="title-quiz-screen">Title</h1>
+        </header>
+
+        <p id="lives">Vies : 3</p>
+
+        <div class="progress-container">
+          <div id="display-progress"></div>
+        </div>
+        <div id="current-question" class="no-wrap"></div>
+        <div id="answer-buttons">
+          <button class="answer-button" data-index="0">Réponse 1</button>
+          <button class="answer-button" data-index="1">Réponse 2</button>
+          <button class="answer-button" data-index="2">Réponse 3</button>
+          <button class="answer-button" data-index="3">Réponse 4</button>
+        </div>
+        <div id="answer-message"></div>
+        <button id="next-question-button">Question suivante</button>
+      </div>
+      <div class="end-screen">
+        <h2 id="score-message"></h2>
+        <h3 id="result-score"></h3>
+        <div id="total-score"></div>
+
+        <p id="best-score"></p>
+
+        <button id="retry-button">Recommencer</button>
+      </div>
+    </div>
+  </body>
+</html>
